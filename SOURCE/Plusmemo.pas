@@ -708,7 +708,7 @@ const UserUpperCaseProc: TpmUpperCaseProc = nil;
 
 implementation
 
-{$R PlusMemo.res}   // The drag-copy and line selection cursors, which are not defined in VCL
+{$R PM_resources.res}   // The drag-copy and line selection cursors, which are not defined in VCL
 
 uses
   Clipbrd;
