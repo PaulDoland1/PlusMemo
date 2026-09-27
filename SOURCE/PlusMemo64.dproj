@@ -88,6 +88,7 @@
         <VerInfo_Release>1</VerInfo_Release>
         <VerInfo_Keys>CompanyName=Electro-Concept Mauricie;FileDescription=PlusMemo 64;FileVersion=7.2.1.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=PlusMemo 64;ProductVersion=7.2;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <DllSuffix>$(Auto)</DllSuffix>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
