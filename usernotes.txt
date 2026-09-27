@@ -1,0 +1,42 @@
+Hi,
+
+I'm Paul Doland.  I'm primarily just a user of PlusMemo, but I am helping out with maintaining
+the packages for newer versions of Delphi.  The original author, Electro-Concept Mauricie
+and Raymond Courteau no longer use Delphi. Although he still has been providing me support as 
+I was a registered user when it was a commercial product.
+
+So in 2026, I sent him some emails pointing out that while I like the component, I found it
+to be slower than I would like.  He actually provided updated code that does paragrahps.add()
+and paragraphs.addstrings() MUCH MUCH faster.  Generally, you should use these functions,
+not lines.add(), lines.addstrings().  He said that he is keeping the lines functions the same
+for compatibility with TMemo.  They operate slightly differently but essentially the same in most
+situations.
+
+I also found the SetDynStyle() function to be slow. It turns out, there are two overloaded versions
+of SetDynStyle().  The version where you provide two TPlusNavigator objects to the function is MUCH
+MUCH faster than the version where you provide start and stop characters referencing the top of the
+memo.  He provided the following sample code which runs very fast:
+
+
+procedure TForm2.Button1Click(Sender: TObject);
+var i: Integer; sNav1, sNav2: TPlusNavigator;
+begin
+  sNav1:= TPlusNavigator.Create(PlusMemo1);
+  sNav2:= TPlusNavigator.Create(PlusMemo1);
+  PlusMemo1.BeginUpdate;
+
+  for i:= 0 to 1000000 {or whatever is your need} do
+    begin
+      PlusMemo1.Paragraphs.Add('insert your text here');
+      sNav1.ParNumber:= PlusMemo1.Paragraphs.Count-1;
+      sNav2.Assign(sNav1);
+      sNav1.ParOffset:= 2;  // Actually, the paragraph offset where styling should begin
+      sNav2.ParOffset:= 5;  // The paragraph offset where styling should end
+      PlusMemo1.SetDynStyle(sNav1, SNav2, ...);
+    end;
+
+  PlusMemo1.EndUpdate;
+  sNav1.Free;
+  sNav2.Free
+end;
+
