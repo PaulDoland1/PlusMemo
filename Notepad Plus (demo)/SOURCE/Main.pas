@@ -883,7 +883,11 @@ begin
       with sbStatus.Panels[sbcUpdate] do
         case UpdateMode of
           umImmediate : Text:= 'Update mode: immediate';
-          umBackground: Text:= 'Update mode: background';
+//
+//          umBackground is currently disabled due to issues.  umOnNeed works well.
+//	    it may return in a future release
+//          umBackground: Text:= 'Update mode: background';
+
           umOnNeed    : Text:= 'Update mode: on need'
           end
     end;
