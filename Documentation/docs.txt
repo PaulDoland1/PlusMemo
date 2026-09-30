@@ -1,0 +1,6 @@
+User docs are available online here:
+https://www.ecmqc.com/plusmemo/Docs/Content.html
+
+I have included a .chm file if you want to use it.
+
+Also included is a PDF of additional information on the TPlusNavigator.
