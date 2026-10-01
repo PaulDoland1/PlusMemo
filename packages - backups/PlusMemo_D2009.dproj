@@ -70,7 +70,7 @@
 			<DCCReference Include="vclactnband.dcp"/>
 			<DCCReference Include="vclx.dcp"/>
 			<DCCReference Include="pmemoreg.pas"/>
-			<DCCReference Include="PlusMemo.pas"/>
+			<DCCReference Include="PlusMemo7.pas"/>
 			<DCCReference Include="PMSupport.pas"/>
 			<DCCReference Include="PlusKeys.pas">
 				<Form>DlgExtKeysEditor</Form>

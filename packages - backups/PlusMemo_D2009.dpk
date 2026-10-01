@@ -36,7 +36,7 @@ package PlusMemo_D2009;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
-{$DESCRIPTION 'PlusMemo v7 and accessories'}
+{$DESCRIPTION 'PlusMemo7 v7 and accessories'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
 
@@ -50,7 +50,7 @@ requires
 
 contains
   pmemoreg in 'pmemoreg.pas',
-  PlusMemo in 'PlusMemo.pas',
+  PlusMemo7 in 'PlusMemo7.pas',
   PMSupport in 'PMSupport.pas',
   PlusKeys in 'PlusKeys.pas' {DlgExtKeysEditor},
   PlusLns in 'PlusLns.pas' {FrmPlusLines},

@@ -39,7 +39,7 @@ package PlusMemo_DXE3;
 {$IMAGEBASE $400000}
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
-{$DESCRIPTION 'PlusMemo v7 and accessories'}
+{$DESCRIPTION 'PlusMemo7 v7 and accessories'}
 {$IMPLICITBUILD ON}
 
 requires
@@ -52,7 +52,7 @@ requires
 
 contains
   pmemoreg in 'pmemoreg.pas',
-  Plusmemo in 'Plusmemo.pas',
+  PlusMemo7 in 'PlusMemo7.pas',
   PMSupport in 'PMSupport.pas',
   PlusKeys in 'PlusKeys.pas' {DlgExtKeysEditor},
   PlusLns in 'PlusLns.pas' {FrmPlusLines},
