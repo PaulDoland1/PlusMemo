@@ -49,7 +49,7 @@ procedure Register;
 implementation
 
 uses
-  Controls, PlusMemo7;
+  Controls, PlusMemo;
 
 const DigitSet = ['0'..'9'];
   HDigitSet = DigitSet + ['a'..'f', 'A'..'F'];

@@ -15,7 +15,7 @@ procedure Register;
 implementation
 
 uses
-  Classes, Controls, OOPHilit, PlusMemo7, PMSupport, PMemoReg, ExtHilit, PlusKeys,
+  Classes, Controls, OOPHilit, PlusMemo, PMSupport, PMemoReg, ExtHilit, PlusKeys,
   Dialogs, DesignEditors, DesignIntf;
 
 type TOOPKeywordsProperty = class(TKeywordsProperty)

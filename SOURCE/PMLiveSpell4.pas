@@ -15,7 +15,7 @@ unit PMLiveSpell4;
 interface
 
 uses
-  Classes, PlusMemo7, PMSupport, ExtHilit, Ad3SpellBase, ad3StringParser;
+  Classes, PlusMemo, PMSupport, ExtHilit, Ad3SpellBase, ad3StringParser;
 
 type
   TSuggestPopupEvent = procedure(Sender: TObject; BadWord: string; var DoPopup: Boolean) of object;

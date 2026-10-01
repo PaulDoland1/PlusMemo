@@ -20,7 +20,7 @@ unit PlusToFormat;
 interface
 
 uses
-  Classes, PlusMemo7, PMSupport;
+  Classes, PlusMemo, PMSupport;
 
 type
   TPlusToFormattedText = class(TComponent)

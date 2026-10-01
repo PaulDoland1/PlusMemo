@@ -13,7 +13,7 @@ unit RegExHilit;
 interface
 
 uses
-  Classes, ExtHilit, PlusMemo7, PMSupport, RegExpr;
+  Classes, ExtHilit, PlusMemo, PMSupport, RegExpr;
 
 type
   TRegExHighlighter = class(TExtHighlighter)

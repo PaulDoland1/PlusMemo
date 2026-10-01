@@ -765,7 +765,7 @@ const pmsCBlockLevel = [pmbLevel1, pmbLevel2, pmbLevel4, pmbLevel8, pmbLevel16];
 implementation
 
 uses
-  PlusMemo7, Forms {$IFDEF D7New}, StrUtils {$ENDIF} {$IFDEF DXE3Up}, System.Types {$ENDIF};
+  PlusMemo, Forms {$IFDEF D7New}, StrUtils {$ENDIF} {$IFDEF DXE3Up}, System.Types {$ENDIF};
 
   {$IFNDEF PMDEBUG}
     {$R-}

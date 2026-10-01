@@ -13,7 +13,7 @@ procedure Register;
 implementation
 
 uses
-  Classes, Controls, Dialogs, SQLHilit, PlusMemo7, PMSupport, PMemoReg, ExtHilit, PlusKeys, DesignEditors, DesignIntf;
+  Classes, Controls, Dialogs, SQLHilit, PlusMemo, PMSupport, PMemoReg, ExtHilit, PlusKeys, DesignEditors, DesignIntf;
 
 type TSQLKeywordsProperty = class(TKeywordsProperty)
 public

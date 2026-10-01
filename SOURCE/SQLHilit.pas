@@ -19,7 +19,7 @@ unit SQLHilit;
 interface
 
 uses
-  SysUtils, Classes, Graphics, Controls, PlusMemo7, PMSupport, ExtHilit, NbHilit;
+  SysUtils, Classes, Graphics, Controls, PlusMemo, PMSupport, ExtHilit, NbHilit;
 
 const SQLDelimiters: TSysCharSet =
   ['"', ' ', '''', '(', ')', ',', '.', '/', ':', ';', '<', '>', '[', ']', '{', '}', #9, '=', '-'];

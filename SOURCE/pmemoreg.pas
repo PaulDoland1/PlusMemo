@@ -63,7 +63,7 @@ procedure Register;
 implementation
 
 uses
-  Classes, Controls, PlusMemo7, PlusLns, PlusKeys, PMSupport;
+  Classes, Controls, PlusMemo, PlusLns, PlusKeys, PMSupport;
 
 procedure Register;
 begin

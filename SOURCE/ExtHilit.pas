@@ -19,7 +19,7 @@ unit ExtHilit;
 interface
 
 uses
-  SysUtils, Classes, Graphics, Controls, PlusMemo7, PMSupport {$IFDEF D7New}, StrUtils {$ENDIF};
+  SysUtils, Classes, Graphics, Controls, PlusMemo, PMSupport {$IFDEF D7New}, StrUtils {$ENDIF};
 
   {$B-} { not complete boolean evaluation }
   {$H+} { long strings }

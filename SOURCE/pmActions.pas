@@ -112,7 +112,7 @@ procedure Register;
 implementation
 
 uses
-  SysUtils, Consts, Controls, Forms, Dialogs, ActnList, {$IFDEF DXE3Up} System.Actions, {$ENDIF} PlusMemo7, PMSupport;
+  SysUtils, Consts, Controls, Forms, Dialogs, ActnList, {$IFDEF DXE3Up} System.Actions, {$ENDIF} PlusMemo, PMSupport;
 
 procedure Register;
 begin

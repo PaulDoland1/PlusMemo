@@ -17,7 +17,7 @@ unit Plusdb;
 interface
 
 uses
-  PlusMemo7, Messages, Classes, Controls, DB, dbCtrls;
+  PlusMemo, Messages, Classes, Controls, DB, dbCtrls;
 
 type
   TDBPlusMemo = class(TPlusMemo)

@@ -17,7 +17,7 @@ unit CPPHilit;
 interface
 
 uses
-  SysUtils, Classes, Graphics, Controls, PlusMemo7, PMSupport, ExtHilit, NbHilit;
+  SysUtils, Classes, Graphics, Controls, PlusMemo, PMSupport, ExtHilit, NbHilit;
 
 const CPPDelimiters: TSysCharSet =
   ['"', ' ', '''', '(', ')', ',', '.', '/', ':', ';', '<', '>', '[', ']', '{', '}', #9, '=', '-'];

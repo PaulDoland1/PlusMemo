@@ -18,7 +18,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, Buttons, pmprint, PlusMemo7, ComCtrls;
+  ExtCtrls, StdCtrls, Buttons, pmprint, PlusMemo, ComCtrls;
 
 type
   TPreviewMouseState = (pmsNormal, pmsLeft, pmsRight, pmsTop, pmsBottom);

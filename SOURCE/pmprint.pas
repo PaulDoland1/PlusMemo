@@ -17,7 +17,7 @@ unit pmprint;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, PlusMemo7, PMSupport;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, PlusMemo, PMSupport;
 
 type
   TpmPrintHFEvent = procedure(Sender: TObject; Header: Boolean; Canvas: TCanvas; PageNo: Integer; Zoom: Single) of object;

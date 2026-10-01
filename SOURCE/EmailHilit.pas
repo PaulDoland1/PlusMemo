@@ -19,7 +19,7 @@ unit EMailHilit;
 interface
 
 uses
-  Classes, PlusMemo7, PMSupport, ExtHilit;
+  Classes, PlusMemo, PMSupport, ExtHilit;
 
 const
   MaxQuoteLevels = 5;
