@@ -18,7 +18,7 @@ unit UrlHighlight;
 interface
 
 uses
-  Classes, PlusMemo, PMSupport, ExtHilit;
+  Classes, PlusMemo7, PMSupport, ExtHilit;
 
 const
   URL_HTTP = 0; { values to add to ContextNumber to know which particular kind of url }

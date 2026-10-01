@@ -32,7 +32,7 @@ unit HtmlHighlight;
 interface
 
 uses
-  Classes, Graphics, Controls, PlusMemo, PMSupport, ExtHilit;
+  Classes, Graphics, Controls, PlusMemo7, PMSupport, ExtHilit;
 
 const      // Context values for the different parts of html highlighting
   HTMLTagScope = 1;

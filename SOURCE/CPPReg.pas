@@ -15,7 +15,7 @@ procedure Register;
 implementation
 
 uses
-  Classes, Controls, CPPHilit, PlusMemo, PMSupport, PMemoReg, ExtHilit, PlusKeys, Dialogs,
+  Classes, Controls, CPPHilit, PlusMemo7, PMSupport, PMemoReg, ExtHilit, PlusKeys, Dialogs,
   DesignEditors, DesignIntf;
 
 type TCPPKeywordsProperty = class(TKeywordsProperty)

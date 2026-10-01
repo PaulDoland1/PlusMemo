@@ -19,7 +19,7 @@ unit OOPHilit;
 interface
 
 uses
-  SysUtils, Classes, Graphics, Controls, PlusMemo, PMSupport, ExtHilit, NbHilit;
+  SysUtils, Classes, Graphics, Controls, PlusMemo7, PMSupport, ExtHilit, NbHilit;
 
 const OOPDelimiters: TSysCharSet =
   ['"', ' ', '''', '(', ')', ',', '.', '/', ':', ';', '<', '>', '[', ']', '{', '}', #9, '=', '-', '+', '*', '^'];

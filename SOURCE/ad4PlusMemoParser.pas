@@ -26,7 +26,7 @@ unit ad4PlusMemoParser;
 interface
 
 uses
-  Windows, ad3ParserBase, PlusMemo, PMSupport;
+  Windows, ad3ParserBase, PlusMemo7, PMSupport;
 
 type
 

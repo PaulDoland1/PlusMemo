@@ -19,7 +19,7 @@ interface
 {$ENDIF}
 
 uses
-  Windows, Graphics, Forms, Controls, Buttons, StdCtrls, Grids, ExtCtrls, ComCtrls, Dialogs, Menus, Messages, PlusMemo, PMSupport,
+  Windows, Graphics, Forms, Controls, Buttons, StdCtrls, Grids, ExtCtrls, ComCtrls, Dialogs, Menus, Messages, PlusMemo7, PMSupport,
   Classes;
 
 type

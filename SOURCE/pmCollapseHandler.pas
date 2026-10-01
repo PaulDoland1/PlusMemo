@@ -58,7 +58,7 @@ implementation
 {$R pmCollapseHandler.res}
 
 uses
-  PlusMemo, Windows, Messages, SysUtils, Forms;
+  PlusMemo7, Windows, Messages, SysUtils, Forms;
 
 { TpmCollapseHandler }
 

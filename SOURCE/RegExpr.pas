@@ -1,4 +1,4 @@
-unit RegExpr;
+﻿unit RegExpr;
 
 {
      Slightly modified by Raymond Courteau, Sept. 2005,
@@ -52,7 +52,7 @@ interface
 {$DEFINE D4}
 {$DEFINE D5}
 {$DEFINE D6}
-{$IF CompilerVersion >= 15} {$DEFINE D7} {$ENDIF}
+{$IF CompilerVersion >= 15} {$DEFINE D7} {$IFEND}
 
 // ======== Define base compiler options
 {$BOOLEVAL OFF}

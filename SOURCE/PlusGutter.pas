@@ -27,7 +27,7 @@ unit PlusGutter;
 interface
 
 uses
-  Messages, Classes, Controls, Graphics, PlusMemo, PMSupport;
+  Messages, Classes, Controls, Graphics, PlusMemo7, PMSupport;
 
 type
   TBookmarkRange = 0..9;

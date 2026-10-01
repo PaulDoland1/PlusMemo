@@ -55,7 +55,7 @@ requires
 
 contains
   pmemoreg in 'pmemoreg.pas',
-  Plusmemo in 'Plusmemo.pas',
+  PlusMemo7 in 'PlusMemo7.pas',
   PMSupport in 'PMSupport.pas',
   PlusKeys in 'PlusKeys.pas' {DlgExtKeysEditor},
   PlusLns in 'PlusLns.pas' {FrmPlusLines},

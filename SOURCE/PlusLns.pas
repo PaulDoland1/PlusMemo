@@ -13,7 +13,7 @@ unit PlusLns;
 interface
 
 uses
-  Windows, Messages, Graphics, Controls, Forms, Dialogs, StdCtrls, Menus, ExtCtrls, PlusMemo, PMSupport, Buttons, Classes;
+  Windows, Messages, Graphics, Controls, Forms, Dialogs, StdCtrls, Menus, ExtCtrls, PlusMemo7, PMSupport, Buttons, Classes;
 
 type
   TFrmPlusLines = class(TForm)
