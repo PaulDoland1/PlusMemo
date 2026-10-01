@@ -1,4 +1,4 @@
-﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 		<PropertyGroup>
 			<ProjectGuid>{45545E50-CD54-4380-8838-8139233D2017}</ProjectGuid>
 			<MainSource>PlusMemo.dpk</MainSource>
@@ -117,7 +117,7 @@
 			<DCCReference Include="vclactnband.dcp"/>
 			<DCCReference Include="vclx.dcp"/>
 			<DCCReference Include="pmemoreg.pas"/>
-			<DCCReference Include="PlusMemo7.pas"/>
+			<DCCReference Include="PlusMemo.pas"/>
 			<DCCReference Include="PMSupport.pas"/>
 			<DCCReference Include="PlusKeys.pas">
 				<Form>DlgExtKeysEditor</Form>
