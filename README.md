@@ -20,7 +20,7 @@ Thus it should just be a matter of opening the included PlusMemo.dproj or PlusMe
 
 For versions from D2009 to 10.3 Rio, you will find old-style project files for each version of Delphi in the “Packages – backups” folder. Copy the version for your compiler from into the SOURCE folder.  Open that package into your version of Delphi and install.  Add the SOURCE folder to your library path.
 
-For versions even older than D2009, packages are not provided.  But you probably can build the packages yourself.  The Pascal code should be compatible as far back as Delphi 6.
+For Delphi versions 2006 and 2007 you probably can build the packages yourself but are not provided.  But the Pascal code should be compatible back to 2006.  Older than that is not supported
 
 Note that the compiled output (.DCU files, etc.) will be different for different versions of Delphi, C++ Builder. So it is advisable to use different directories for different Delphi versions. The same is true if you use both 32 bit and 64 bit and the compiled output is different.
 
