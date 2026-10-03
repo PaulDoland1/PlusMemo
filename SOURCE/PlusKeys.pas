@@ -12,11 +12,9 @@ unit PlusKeys;
 
 interface
 
-{$IFDEF D7New}
-  {$WARN UNSAFE_CAST OFF}
-  {$WARN UNSAFE_CODE OFF}
-  {$WARN UNSAFE_TYPE OFF}
-{$ENDIF}
+{$WARN UNSAFE_CAST OFF}
+{$WARN UNSAFE_CODE OFF}
+{$WARN UNSAFE_TYPE OFF}
 
 uses
   Windows, Graphics, Forms, Controls, Buttons, StdCtrls, Grids, ExtCtrls, ComCtrls, Dialogs, Menus, Messages, PlusMemo, PMSupport,

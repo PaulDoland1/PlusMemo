@@ -46,13 +46,13 @@
 interface
 
 // ======== Determine compiler
-// Paul Doland:  Now assuming at least Delphi 6.
+// Paul Doland:  PlusMemo now assumes at least Delphi 2006
 {$DEFINE D2}
 {$DEFINE D3}
 {$DEFINE D4}
 {$DEFINE D5}
 {$DEFINE D6}
-{$IF CompilerVersion >= 15} {$DEFINE D7} {$IFEND}
+{$DEFINE D7}
 
 // ======== Define base compiler options
 {$BOOLEVAL OFF}

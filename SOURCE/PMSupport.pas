@@ -9,11 +9,9 @@ unit PMSupport;
 
 interface
 
-{$IFDEF D7New}
-  {$WARN UNSAFE_CAST OFF}
-  {$WARN UNSAFE_CODE OFF}
-  {$WARN UNSAFE_TYPE OFF}
-{$ENDIF}
+{$WARN UNSAFE_CAST OFF}
+{$WARN UNSAFE_CODE OFF}
+{$WARN UNSAFE_TYPE OFF}
 
 {$A+} { this unit requires word alignment of data }
 {$B-} { not complete boolean evaluation }
@@ -765,7 +763,7 @@ const pmsCBlockLevel = [pmbLevel1, pmbLevel2, pmbLevel4, pmbLevel8, pmbLevel16];
 implementation
 
 uses
-  PlusMemo, Forms {$IFDEF D7New}, StrUtils {$ENDIF} {$IFDEF DXE3Up}, System.Types {$ENDIF};
+  PlusMemo, Forms, StrUtils {$IFDEF DXE3Up}, System.Types {$ENDIF};
 
   {$IFNDEF PMDEBUG}
     {$R-}
@@ -5744,10 +5742,8 @@ begin
     begin
       ms := IniStrings[i];
       eqpos := Pos('=', ms);
-      {$IFDEF D7New}
       if eqpos = 1 then
         eqpos := PosEx('=', ms, 2);
-      {$ENDIF}
       if eqpos > 0 then
       begin
         msp := pmNativePChar(ms);
@@ -6039,10 +6035,8 @@ begin
   begin
     ms := ks[i];
     eqpos := Pos('=', ms);
-    {$IFDEF D7New}
     if eqpos = 1 then
       eqpos := PosEx('=', ms, 2);
-    {$ENDIF}
     if eqpos > 0 then
     begin
       msp := pmNativePChar(ms);

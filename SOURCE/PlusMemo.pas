@@ -24,11 +24,9 @@ unit PlusMemo;
   {$DEFINE PM_IMEMESSAGES}
 {$ENDIF}
 
-{$IFDEF D7New}
-  {$WARN UNSAFE_CAST OFF}
-  {$WARN UNSAFE_CODE OFF}
-  {$WARN UNSAFE_TYPE OFF}
-{$ENDIF}
+{$WARN UNSAFE_CAST OFF}
+{$WARN UNSAFE_CODE OFF}
+{$WARN UNSAFE_TYPE OFF}
 
 {$IFNDEF PMDEBUG}
   {$R-}
@@ -774,8 +772,8 @@ begin
       gDestroyedMemoList := TList.Create;
   end;
 
-  ControlStyle := [csClickEvents, csCaptureMouse, csDoubleClicks, csReplicatable
-                   {$IFDEF D7New}, csNeedsBorderPaint {$ENDIF}];
+  ControlStyle := [csClickEvents, csCaptureMouse, csDoubleClicks, csReplicatable,
+                   csNeedsBorderPaint];
 
     if PmRightArrowCur = 0 then
       PmRightArrowCur := LoadCursor(hInstance, 'PMRIGHTARROW');

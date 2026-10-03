@@ -1,5 +1,9 @@
-{ Conditional defines used by this source code file: Please avoid conflicting defines in your environment
-  D7New      => defined under D7 and up
+{
+  Code now assumes at least D2006.  Older compilers will not accept the code
+
+  Conditional defines used by this source code file: Please avoid conflicting
+  defines in your environment
+
   D2009Up    => defined under Delphi2009 and up
   D2010Up    => defined under Delphi2010 and up
   DXEUp      => defined under Delphi XE and up
@@ -8,9 +12,9 @@
   DXE4Up    => defined under Delphi XE4 and up
   PlusMemo   => always defined
   TPlusMemo  => always defined
-  PMDEBUG    => used to include debug code. }
+  PMDEBUG    => used to include debug code.
+}
 
-{$IF CompilerVersion >= 15} {$DEFINE D7New} {$ENDIF}
 {$IF CompilerVersion >= 18} {$DEFINE D2006Up} {$ENDIF}
 {$IF CompilerVersion >= 20} {$DEFINE D2009Up} {$ENDIF}
 {$IF CompilerVersion >= 21} {$DEFINE D2010Up} {$ENDIF}
@@ -25,9 +29,6 @@
 {$J+} { writeable typed constants }
 
 // These also include equivalent C++ Builder versions
-// Delphi 6: 14.0 (VER140)
-// Delphi 7: 15.0 (VER150)
-// Delphi 2005: 17.0 (VER170)
 // Delphi 2006: 18.0 (VER180)  (ALSO defined in Delphi 2007)
 // Delphi 2007: 18.5 (VER185)
 // Delphi 2009: 20.0 (VER200)

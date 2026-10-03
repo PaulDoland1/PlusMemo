@@ -7,11 +7,9 @@ unit PlusToFormat;
 
 {$I PMDefines.inc}
 
-{$IFDEF D7New}
-  {$WARN UNSAFE_CAST OFF}
-  {$WARN UNSAFE_CODE OFF}
-  {$WARN UNSAFE_TYPE OFF}
-{$ENDIF}
+{$WARN UNSAFE_CAST OFF}
+{$WARN UNSAFE_CODE OFF}
+{$WARN UNSAFE_TYPE OFF}
 
 {$DEFINE PlusToFormat}
 {$IFDEF PlusToFormatU} {$DEFINE pmProcessUnicode} {$ENDIF}

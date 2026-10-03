@@ -8,18 +8,16 @@ unit ExtHilit;
 
 {$I PMDefines.inc}
 
-{$IFDEF D7New}
-  {$WARN UNSAFE_CAST OFF}
-  {$WARN UNSAFE_CODE OFF}
-  {$WARN UNSAFE_TYPE OFF}
-{$ENDIF}
+{$WARN UNSAFE_CAST OFF}
+{$WARN UNSAFE_CODE OFF}
+{$WARN UNSAFE_TYPE OFF}
 
 {$DEFINE ExtHilit}
 
 interface
 
 uses
-  SysUtils, Classes, Graphics, Controls, PlusMemo, PMSupport {$IFDEF D7New}, StrUtils {$ENDIF};
+  SysUtils, Classes, Graphics, Controls, PlusMemo, PMSupport, StrUtils;
 
   {$B-} { not complete boolean evaluation }
   {$H+} { long strings }
@@ -239,10 +237,8 @@ begin
     begin
       ms := IniStrings[i];
       eqpos := Pos('=', ms);
-      {$IFDEF D7New}
       if eqpos = 1 then
         eqpos := PosEx('=', ms, 2);
-      {$ENDIF}
       if eqpos > 0 then
       begin
         msp := pmNativePChar(ms);
@@ -343,10 +339,8 @@ begin
   begin
     ms := ks[i];
     eqpos := Pos('=', ms);
-    {$IFDEF D7New}
     if eqpos = 1 then
       eqpos := PosEx('=', ms, 2);
-    {$ENDIF}
     if eqpos > 0 then
     begin
       msp := pmNativePChar(ms);
