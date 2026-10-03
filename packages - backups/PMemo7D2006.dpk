@@ -1,4 +1,4 @@
-package PMemo7D2009;
+package PMemo7D2006;
 
 {$R *.res}
 {$R 'pmemoreg.dcr'}
