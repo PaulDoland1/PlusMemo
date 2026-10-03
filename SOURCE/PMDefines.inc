@@ -15,13 +15,13 @@
   PMDEBUG    => used to include debug code.
 }
 
-{$IF CompilerVersion >= 18} {$DEFINE D2006Up} {$ENDIF}
-{$IF CompilerVersion >= 20} {$DEFINE D2009Up} {$ENDIF}
-{$IF CompilerVersion >= 21} {$DEFINE D2010Up} {$ENDIF}
-{$IF CompilerVersion >= 22} {$DEFINE DXEUp} {$ENDIF}
-{$IF CompilerVersion >= 23} {$DEFINE DXE2Up} {$ENDIF}
-{$IF CompilerVersion >= 24} {$DEFINE DXE3Up} {$ENDIF}
-{$IF CompilerVersion >= 25} {$DEFINE DXE4Up} {$ENDIF}
+{$IF CompilerVersion >= 18} {$DEFINE D2006Up} {$IFEND}
+{$IF CompilerVersion >= 20} {$DEFINE D2009Up} {$IFEND}
+{$IF CompilerVersion >= 21} {$DEFINE D2010Up} {$IFEND}
+{$IF CompilerVersion >= 22} {$DEFINE DXEUp} {$IFEND}
+{$IF CompilerVersion >= 23} {$DEFINE DXE2Up} {$IFEND}
+{$IF CompilerVersion >= 24} {$DEFINE DXE3Up} {$IFEND}
+{$IF CompilerVersion >= 25} {$DEFINE DXE4Up} {$IFEND}
 
 {$A+} { PlusMemo requires word alignment of data }
 {$B-} { not complete boolean evaluation }
