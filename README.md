@@ -18,7 +18,7 @@ Thus it should just be a matter of opening the included PlusMemo.dproj or PlusMe
 
 (Note specifically for Sydney:  In 10.4.0, the IDE did not understand the $LIBSUFFIX AUTO option, but the compiler did. So, it should work.  But unless you have a reason not to, you should consider getting the 10.4.1 or 10.4.2 update that has full $LIBSUFFIX AUTO support and other fixes)
 
-For versions from D2006 to 10.3 Rio, you will find old-style project files for each version of Delphi in the “Packages – backups” folder. Copy the version for your compiler from into the SOURCE folder.  Open that package into your version of Delphi and install.  Add the SOURCE folder to your library path. Delphi older than D2006 is not supported.
+For versions from D2006 to 10.3 Rio, you will find old-style project files for each version of Delphi in the “Packages – backups” folder. Copy the version for your compiler from into the SOURCE folder.  Open that package into your version of Delphi and install.  Add the SOURCE folder to your library path. For even older versions of Delphi, see very-old-delphi.txt.
 
 Note that the compiled output (.DCU files, etc.) will be different for different versions of Delphi, C++ Builder. So it is advisable to use different directories for different Delphi versions. The same is true if you use both 32 bit and 64 bit and the compiled output is different.
 
