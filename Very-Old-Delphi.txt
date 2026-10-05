@@ -1,6 +1,6 @@
 The source code in this distribution has been tested as far back as D2006 and will not
 work with anything earlier. If you really need to use PlusMemo with something earlier,
-the following will (probably) work with many older versions of Delphi, though how far
+the following will (probably) work with even older versions of Delphi, though how far
 back I don't know:
 
 Download version 7.2 from the ECM website:
