@@ -1,23 +1,29 @@
 In the "packages - backups" folder, you will find:
 
-1. Generic packages PlusMemo, PlusMemo64.  Same as the ones in the SOURCE folder.  These are backups.
+1. Generic packages PlusMemo.  Same as in the SOURCE folder.  These are backups.
    These are intended for use with 10.4 Sydney and later. Even future versions.
 
 2. Version-specific packages for Delphi 2006 through 10.3 Rio.  Ex: PMemo7Berlin
    To use, copy the correct ones for your copy of Delphi into the SOURCE folder.
 
-Here in this folder, you will find Alternative generic packages: PMemo7.dpk, PMemo7_64.dpk
-These should work with any version of Delphi, from Delphi 2006 on up. You just need to do the
+Here in this folder, you will find an Alternative generic packages: PMemo7.dpk.
+This should work with any version of Delphi, from Delphi 2006 on up. You just need to do the
 following:
 
-   a.  Copy PMemo7.dpk and/or PMemo7_64.dpk into the SOURCE folder.
+   a.  Copy PMemo7.dpk into the SOURCE folder.
    b.  Open the package in your version of Delphi.
+   c.  If your compiler supports 64-bit and you want to use 64-bit, add 64-bit platform.
    c.  Go to the project properties and find the Lib Suffix option.  
        (It is in different places in different versions)
    d.  Set the Lib Suffix to something appropriate for the version of Delphi you are using.
        Ex:  For Delphi 2006, you could set the Lib Suffix to D2006
        For versions of Delphi 10.4.1 Sydney or later, you could use $(AUTO) and that would
-       be effectively the same thing as the PlusMemo, PlusMemo64 generic packages I provided.
+       be effectively the same thing as the PlusMemo generic packages I provided.
+   d.  If using 64-bit, set the Lib Suffix for both 32-bit and 64-bit.
+   e.  Go to project options, Delphi compiler.  Set unit output directory to:
+       .\$(Platform)\$(Config)
+   f.  Do this for both 32-bit and 64-bit if you are using both.
+   g.  Compile. You can install the 32-bit into 32-bit IDE and the 64-bit into 64-bit IDE.
 
 For years, the packages have been named PMemo7xxx.  Using the $AUTO option creates bpl files
 named something like PMemo70370.bpl.  I didn't like that, which is why I renamed them to
