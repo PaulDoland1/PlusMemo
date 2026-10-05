@@ -20,20 +20,20 @@ So to use either of these with any version of Delphi, Delphi 2006 on up, you
 just need to do the following:
 
    a.  Copy PMemo7.dpk or PlusMemo.dpk into the SOURCE folder.
-   b.  Open the package in your version of Delphi.
-   c.  If your compiler supports 64-bit and you want to use 64-bit, add 64-bit platform.
-   c.  Go to the project properties and find the Lib Suffix option.  
+   b.  We are rebuilding the .dproj file from scratch.  Delete PlusMemo.dproj from the SOURCE folder.
+   c.  Open the package in your version of Delphi.
+   d.  If your compiler supports 64-bit and you want to use 64-bit, add 64-bit platform.
+   e.  Go to the project properties and find the Lib Suffix option.  
        (It is in different places in different versions)
-   d.  Set the Lib Suffix to something appropriate for the version of Delphi you are using.
+   f.  Set the Lib Suffix to something appropriate for the version of Delphi you are using.
        Ex:  For Delphi 2006, you could set the Lib Suffix to D2006
        For versions of Delphi 10.4.1 Sydney or later, you could use $(AUTO) and that would
        be effectively the same thing as the PlusMemo generic packages I provided.
-   d.  If using 64-bit, set the Lib Suffix for both 32-bit and 64-bit.
-   e.  Go to project options, Delphi compiler.  Set unit output directory to:
+   g.  If using 64-bit, set the Lib Suffix for both 32-bit and 64-bit.
+   h.  Go to project options, Delphi compiler.  Set unit output directory to:
        .\$(Platform)\$(Config)
-   f.  Do this for both 32-bit and 64-bit if you are using both.
-   g.  Compile. You can install the 32-bit into 32-bit IDE and the 64-bit into 64-bit IDE.
-
+   i.  Do this for both 32-bit and 64-bit if you are using both.
+   j.  Compile. You can install the 32-bit into 32-bit IDE and the 64-bit into 64-bit IDE.
 
 I considered just these alternative generic packages which work with anything
 instead of the other packages.  But I decided to give you all the options and
