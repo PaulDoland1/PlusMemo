@@ -39,5 +39,5 @@ The default installation does NOT include the DB-aware version of PlusMemo. I do
 
 There are files related to the Addict spell check component.  ad4PlusMemoParser and adLiveSpellCheck4.  I've never used Addict and I believe it is discontinued.  They are not included in the PlusMemo packages by default.  Add them if you need them.  There is an open-source spell check component known as Hunspell which I've never used either.  Perhaps it can be integrated into PlusMemo but I have no experience.
 
-Once installed, you might want to build the demo application in the Notepad Plus (demo)" folder and experiment with it.
 
+Once installed, you might want to build the demo application in the Notepad Plus (demo)" folder and experiment with it.
