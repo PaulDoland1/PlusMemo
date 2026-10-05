@@ -7,7 +7,11 @@ Download version 7.2 from the ECM website:
 
 https://www.ecmqc.com/Processor2/plusmemolinks.php
 
-Probably any 32-bit version will do. I will assume you get the D2009 version.  Do this:
+Probably any 32-bit version will do. I will assume you get the D2009 version.
+Here is a direct link to the D2009 version:
+https://www.ecmqc.com/Processor2/plusmemo.php?access=&file=PMemo7D2009.zip
+
+Follow these steps:
 
 1.  Delete any compiler generated files (.dcu, .bpl, .hpp, etc.) and .dproj files.
 You really only need these files:
