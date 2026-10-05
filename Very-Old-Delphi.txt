@@ -3,7 +3,7 @@ work with anything earlier. If you really need to use PlusMemo with something ea
 the following will (probably) work with many older versions of Delphi, though how far
 back I don't know:
 
-Download version 7.2 from the EMC website:
+Download version 7.2 from the ECM website:
 
 https://www.ecmqc.com/Processor2/plusmemolinks.php
 
