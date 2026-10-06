@@ -8,7 +8,7 @@
         <Base>True</Base>
         <AppType>Package</AppType>
         <FrameworkType>VCL</FrameworkType>
-        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>3</TargetedPlatforms>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
@@ -107,7 +107,7 @@
         <VerInfo_Release>1</VerInfo_Release>
         <VerInfo_Keys>CompanyName=Electro-Concept Mauricie;FileDescription=PlusMemo component library;FileVersion=7.2.1.0;InternalName=;LegalCopyright=(c) 2013;LegalTrademarks=;OriginalFilename=;ProductName=PlusMemo;ProductVersion=6.9;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <DllSuffix>$(Auto)</DllSuffix>
+        <DllSuffix>$(AUTO)</DllSuffix>
         <VerInfo_MajorVer>7</VerInfo_MajorVer>
         <DCC_DcpOutput>.</DCC_DcpOutput>
         <DCC_BplOutput>.</DCC_BplOutput>
@@ -116,7 +116,7 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <DllSuffix>$(Auto)</DllSuffix>
+        <DllSuffix>$(AUTO)</DllSuffix>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
@@ -151,11 +151,17 @@
         <DCCReference Include="RegExHilit.dcr"/>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="vcl.dcp"/>
-        <DCCReference Include="designide.dcp"/>
         <DCCReference Include="xmlrtl.dcp"/>
         <DCCReference Include="vclactnband.dcp"/>
         <DCCReference Include="vclx.dcp"/>
+        <DCCReference Include="designide.dcp"/>
         <DCCReference Include="pmemoreg.pas"/>
+        <DCCReference Include="ExtHilitReg.pas"/>
+        <DCCReference Include="CPPReg.pas"/>
+        <DCCReference Include="OOPReg.pas"/>
+        <DCCReference Include="HtmlHilitReg.pas"/>
+        <DCCReference Include="EmailHilitReg.pas"/>
+        <DCCReference Include="SQLHilitReg.pas"/>
         <DCCReference Include="Plusmemo.pas"/>
         <DCCReference Include="PMSupport.pas"/>
         <DCCReference Include="PlusKeys.pas">
@@ -165,27 +171,21 @@
             <Form>FrmPlusLines</Form>
         </DCCReference>
         <DCCReference Include="ExtHilit.pas"/>
-        <DCCReference Include="ExtHilitReg.pas"/>
         <DCCReference Include="pmCollapseHandler.pas"/>
         <DCCReference Include="PlusGutter.pas"/>
         <DCCReference Include="CPPHilit.pas"/>
-        <DCCReference Include="CPPReg.pas"/>
         <DCCReference Include="pmActions.pas"/>
         <DCCReference Include="NbHilit.pas"/>
         <DCCReference Include="OOPHilit.pas"/>
-        <DCCReference Include="OOPReg.pas"/>
         <DCCReference Include="UrlHighlight.pas"/>
         <DCCReference Include="pmpprev.pas">
             <Form>FrmPMPrintPreview</Form>
         </DCCReference>
         <DCCReference Include="pmprint.pas"/>
         <DCCReference Include="HtmlHighlight.pas"/>
-        <DCCReference Include="HtmlHilitReg.pas"/>
         <DCCReference Include="EmailHilit.pas"/>
-        <DCCReference Include="EmailHilitReg.pas"/>
         <DCCReference Include="PlusToFormat.pas"/>
         <DCCReference Include="SQLHilit.pas"/>
-        <DCCReference Include="SQLHilitReg.pas"/>
         <DCCReference Include="RegExHilit.pas"/>
         <DCCReference Include="RegExpr.pas"/>
         <BuildConfiguration Include="Debug">
@@ -238,8 +238,8 @@
                     <VersionInfoKeys Name="Comments"/>
                 </VersionInfoKeys>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k250.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp250.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Platforms>
@@ -258,7 +258,6 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
@@ -393,12 +392,20 @@
                         <Operation>1</Operation>
                         <Extensions>.framework</Extensions>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="DependencyModule">
                     <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
@@ -424,6 +431,10 @@
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
                         <Extensions>.bpl</Extensions>
@@ -443,6 +454,9 @@
                         <Operation>0</Operation>
                     </Platform>
                     <Platform Name="OSX32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <Operation>0</Operation>
                     </Platform>
                     <Platform Name="Win32">
@@ -563,6 +577,10 @@
                         <RemoteDir>Contents\Resources</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Required="true" Name="ProjectOutput">
                     <Platform Name="Android">
@@ -582,6 +600,9 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win32">
