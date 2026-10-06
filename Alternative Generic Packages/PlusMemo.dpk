@@ -45,37 +45,42 @@ package PlusMemo;
 requires
   rtl,
   vcl,
-  designide,
   xmlrtl,
   vclactnband,
-  vclx;
+  vclx
+{$IFDEF WIN32}
+  , designide
+{$ENDIF}
+  ;
 
 contains
+{$IFDEF WIN32}
   pmemoreg in 'pmemoreg.pas',
+  ExtHilitReg in 'ExtHilitReg.pas',
+  CPPReg in 'CPPReg.pas',
+  OOPReg in 'OOPReg.pas',
+  HtmlHilitReg in 'HtmlHilitReg.pas',
+  EmailHilitReg in 'EmailHilitReg.pas',
+  SQLHilitReg in 'SQLHilitReg.pas',
+{$ENDIF}
   Plusmemo in 'Plusmemo.pas',
   PMSupport in 'PMSupport.pas',
   PlusKeys in 'PlusKeys.pas' {DlgExtKeysEditor},
   PlusLns in 'PlusLns.pas' {FrmPlusLines},
   ExtHilit in 'ExtHilit.pas',
-  ExtHilitReg in 'ExtHilitReg.pas',
   pmCollapseHandler in 'pmCollapseHandler.pas',
   PlusGutter in 'PlusGutter.pas',
   CPPHilit in 'CPPHilit.pas',
-  CPPReg in 'CPPReg.pas',
   pmActions in 'pmActions.pas',
   NbHilit in 'NbHilit.pas',
   OOPHilit in 'OOPHilit.pas',
-  OOPReg in 'OOPReg.pas',
   UrlHighlight in 'UrlHighlight.pas',
   pmpprev in 'pmpprev.pas' {FrmPMPrintPreview},
   pmprint in 'pmprint.pas',
   HtmlHighlight in 'HtmlHighlight.pas',
-  HtmlHilitReg in 'HtmlHilitReg.pas',
   EmailHilit in 'EmailHilit.pas',
-  EmailHilitReg in 'EmailHilitReg.pas',
   PlusToFormat in 'PlusToFormat.pas',
   SQLHilit in 'SQLHilit.pas',
-  SQLHilitReg in 'SQLHilitReg.pas',
   RegExHilit in 'RegExHilit.pas',
   RegExpr in 'RegExpr.pas';
 
