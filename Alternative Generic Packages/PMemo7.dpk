@@ -1,4 +1,4 @@
-package PlusMemo;
+package PMemo7;
 
 {$R *.res}
 {$R 'pmemoreg.dcr'}
