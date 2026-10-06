@@ -9,6 +9,7 @@ PlusMemo is the coolest enhanced memo edit control for Delphi 2009 on up. Native
 * Mix any font style or background/foreground colors for parts of your text, and use two different fonts at your liking;
 * No limit on text length. Handle 100MB easily on minimal systems
 * Plus much more: multi-level Undo/Redo, drag and drop editing, text justification, column block selection, various properties and methods to interact at run time with the text content
+* Not a true RTF component, but has RTF-like capabilities and can export RTF and HTML files.
 
 
 User docs are available online here:
@@ -16,28 +17,25 @@ https://www.ecmqc.com/plusmemo/Docs/Content.html
 I have also provided a .CHM file, and a PDF file in the DOCUMENTATION folder.
 
 
-Within the SOURCE folder, you should find package files PlusMemo.dpk and PlusMemo.dproj.  These should install in any version of Delphi or C++ Builder, 10.4 Syndey or later for either 32 bit or 64 bit.  It has been tested up to Delphi 13 Florence but the packages are designed to hopefully install in future versions as well unless Embarcadero makes a code-breaking change.
+Within the SOURCE folder, you should find PlusMemo.groupproj and associated .dpk and .dproj files for design and runtime packages.  These should install in any version of Delphi or C++ Builder, 10.4 Syndey or later for either 32 bit or 64 bit.  It has been tested up to Delphi 13 Florence but the packages are designed to hopefully install in future versions as well unless Embarcadero makes a code-breaking change.
 
 
-Thus it should just be a matter of opening the included PlusMemo.dproj from the SOURCE folder into any version of Delphi 10.4 Sydney or later and compiling. It supports both 32-bit and 64-bit. Compile either or both. Then add the SOURCE directory to your library search in Delphi/C++ Builder for 32-bit and/or 64-bit depending on what you need.
-
-You can install the 32-bit package into a 32-bit IDE.  Delphi did not support a 64-bit IDE until Delphi 13 Florence.  I'm not yet supporting installing the package into the Florence 64-bit IDE. But it might work if you simply remove the two {$IFDEF WIN32}/{$ENDIF} pairs from PlusMemo.dpk such that the registration components always install.  I will test this at a future date.
-
-****************
-There is $IFDEF code in the PlusMemo.dpk file that the compiler will strip out if you save it.  So make the PlusMemo.dpk file readonly.  Or don't save it. I will make the design time and run time packages separate in a future upcoming release.  This is a temporary hack.  If you let it save the PlusMemo.dpk, it will work fine in 32 bit but will fail to install 64 bit except for maybe Delphi 13 Florence
-****************
+Thus it should just be a matter of opening PlusMemo.groupproj from the SOURCE folder into any version of Delphi 10.4 Sydney or later and compiling the runtime and design-time packages. It supports both 32-bit and 64-bit. Compile either or both. Then add the SOURCE directory to your library search in Delphi/C++ Builder for 32-bit and/or 64-bit depending on what you need.
 
 
-(Note specifically for Sydney:  In 10.4.0, the IDE did not understand the $LIBSUFFIX AUTO option, but the compiler did. So, it should work.  But unless you have a reason not to, you should consider getting the 10.4.1 or 10.4.2 update that has full $LIBSUFFIX AUTO support and other fixes)
+You can install the 32-bit design-time package into a 32-bit IDE.  Starting with Delphi 12.3, there is now a 64-bit IDE. you can install the 64-bit design-time package into a 64-bit IDE.
 
 
-For versions from D2006 to 10.3 Rio, you will find old-style project files for each version of Delphi in the "Packages – backups" folder. These are separate for 32-bit and 64-bit.  Copy the version for your compiler from into the SOURCE folder.  Open that package into your version of Delphi and install.  Add the SOURCE folder to your library path. For even older versions of Delphi, see very-old-delphi.txt.
+(Note specifically for Sydney:  In 10.4.0, the IDE did not understand the $LIBSUFFIX AUTO option, but the compiler did. So, it should work.  But the 10.4.0 IDE might make errors in the package files if you save them within the IDE.  I would suggest consider getting the 10.4.1 or 10.4.2 update that has full $LIBSUFFIX AUTO support and other fixes unless you have some reason not to.)
+
+
+For versions from D2006 to 10.3 Rio, you will find old-style project files for each version of Delphi in the "Packages – backups" folder. These are separate for 32-bit and 64-bit. They are combined design-time/runtime packages. Copy the version for your compiler from into the SOURCE folder.  Open that package into your version of Delphi and install.  Add the SOURCE folder to your library path. For even older versions of Delphi, see very-old-delphi.txt.
 
 
 Note that the compiled output (.DCU files, etc.) will be different for different versions of Delphi, C++ Builder. So it is advisable to use different directories for different Delphi versions. 
 
 
-Note that when you install PlusMemo, the Delphi IDE will want to update the PlusMemo.dproj file to the version of Delphi that you are using.  Therefore I put extra copies of the PlusMemo.dpk and PlusMemo.dproj project files into the "Packages - backups" just for possible convenience.
+Note that when you install PlusMemo, the Delphi IDE will want to update the .dproj files to the version of Delphi that you are using.  Therefore I put extra copies of the package project files into the "Packages - backups" just for possible convenience.
 
 
 The default installation does NOT include the DB-aware version of PlusMemo. I don't know if many people use it.  But it exists. According to Raymond, to use the DB-aware version, you just need to add Plusdb.pas and Plusdb.dcr to the package. But you also need to add some of the Delphi DB packages and for some reason I had trouble with that.  So I just left them out like Raymond did.  I may try to revisit this in the future if requested.
