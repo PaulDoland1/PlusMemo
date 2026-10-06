@@ -19,7 +19,9 @@ I have also provided a .CHM file, and a PDF file in the DOCUMENTATION folder.
 Within the SOURCE folder, you should find package files PlusMemo.dpk and PlusMemo.dproj.  These should install in any version of Delphi or C++ Builder, 10.4 Syndey or later for either 32 bit or 64 bit.  It has been tested up to Delphi 13 Florence but the packages are designed to hopefully install in future versions as well unless Embarcadero makes a code-breaking change.
 
 
-Thus it should just be a matter of opening the included PlusMemo.dproj from the SOURCE folder into any version of Delphi 10.4 Sydney or later and compiling. It supports both 32-bit and 64-bit. Compile either or both. You can install the 32-bit into the 32-bit IDE and 64-bit into a 64-bit IDE.  Then add the SOURCE directory to your library search in Delphi/C++ Builder for 32-bit and/or 64-bit depending on what you need.
+Thus it should just be a matter of opening the included PlusMemo.dproj from the SOURCE folder into any version of Delphi 10.4 Sydney or later and compiling. It supports both 32-bit and 64-bit. Compile either or both. Then add the SOURCE directory to your library search in Delphi/C++ Builder for 32-bit and/or 64-bit depending on what you need.
+
+You can install the 32-bit package into a 32-bit IDE.  Delphi did not support a 64-bit IDE until Delphi 13 Florence.  I'm not yet supporting installing the package into the Florence 64-bit IDE. But it might work if you simply remove the two {$IFDEF WIN32}/{$ENDIF} pairs from PlusMemo.dpk such that the registration components always install.  I will test this at a future date.
 
 
 (Note specifically for Sydney:  In 10.4.0, the IDE did not understand the $LIBSUFFIX AUTO option, but the compiler did. So, it should work.  But unless you have a reason not to, you should consider getting the 10.4.1 or 10.4.2 update that has full $LIBSUFFIX AUTO support and other fixes)
