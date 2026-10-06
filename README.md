@@ -23,6 +23,10 @@ Thus it should just be a matter of opening the included PlusMemo.dproj from the 
 
 You can install the 32-bit package into a 32-bit IDE.  Delphi did not support a 64-bit IDE until Delphi 13 Florence.  I'm not yet supporting installing the package into the Florence 64-bit IDE. But it might work if you simply remove the two {$IFDEF WIN32}/{$ENDIF} pairs from PlusMemo.dpk such that the registration components always install.  I will test this at a future date.
 
+****************
+There is $IFDEF code in the PlusMemo.dpk file that the compiler will strip out if you save it.  So make the PlusMemo.dpk file readonly.  Or don't save it. I will make the design time and run time packages separate in a future upcoming release.  This is a temporary hack.  If you let it save the PlusMemo.dpk, it will work fine in 32 bit but will fail to install 64 bit except for maybe Delphi 13 Florence
+****************
+
 
 (Note specifically for Sydney:  In 10.4.0, the IDE did not understand the $LIBSUFFIX AUTO option, but the compiler did. So, it should work.  But unless you have a reason not to, you should consider getting the 10.4.1 or 10.4.2 update that has full $LIBSUFFIX AUTO support and other fixes)
 
