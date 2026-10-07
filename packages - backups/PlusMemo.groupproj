@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F9302407-EE79-4A8B-AAC2-7FB603BE0FA6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PlusMemoRun.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PlusMemoDes.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PlusMemoRun">
+        <MSBuild Projects="PlusMemoRun.dproj"/>
+    </Target>
+    <Target Name="PlusMemoRun:Clean">
+        <MSBuild Projects="PlusMemoRun.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PlusMemoRun:Make">
+        <MSBuild Projects="PlusMemoRun.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PlusMemoDes">
+        <MSBuild Projects="PlusMemoDes.dproj"/>
+    </Target>
+    <Target Name="PlusMemoDes:Clean">
+        <MSBuild Projects="PlusMemoDes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PlusMemoDes:Make">
+        <MSBuild Projects="PlusMemoDes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PlusMemoRun;PlusMemoDes"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PlusMemoRun:Clean;PlusMemoDes:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PlusMemoRun:Make;PlusMemoDes:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
