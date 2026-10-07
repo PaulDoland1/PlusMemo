@@ -49,8 +49,6 @@ type
     property MaxLevels: Integer read fMaxLevels write setMaxLevels default 4;
   end;
 
-procedure Register;
-
 implementation
 
 {$R pmCollapseHandler.res}
@@ -376,11 +374,6 @@ begin
     fMaxLevels := Value;
     InvalidateMemos(Self)
   end
-end;
-
-procedure Register;
-begin
-  RegisterComponents( { UCONVERT } 'PlusMemo' { /UCONVERT } , [TpmCollapseHandler]);
 end;
 
 end.

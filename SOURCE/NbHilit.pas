@@ -42,8 +42,6 @@ type
     property OnQueryHilit;
   end;
 
-procedure Register;
-
 implementation
 
 uses
@@ -51,11 +49,6 @@ uses
 
 const DigitSet = ['0'..'9'];
   HDigitSet = DigitSet + ['a'..'f', 'A'..'F'];
-
-procedure Register;
-begin
-  RegisterComponents( { UCONVERT } 'PlusMemo' { /UCONVERT } , [TNumberHighlighter]);
-end;
 
 procedure TNumberHighlighter.setCTypeHex(const Value: Boolean);
 begin

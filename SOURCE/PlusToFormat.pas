@@ -88,19 +88,12 @@ type
 var UrlContextLow: Integer = 1024;
   UrlContextHigh: Integer = 1024 + 14;
 
-procedure Register;
-
 implementation
 
 uses
   SysUtils, Windows, Graphics, Clipbrd, Controls {$IFDEF DXE3Up}, System.UITypes {$ENDIF}; // {$IFDEF DXE5Up}, AnsiStrings {$ENDIF};
 
 var RTFClipboardFormat, HtmlClipboardFormat: Integer; { set to zero at init time }
-
-procedure Register;
-begin
-  RegisterComponents( { UCONVERT } 'PlusMemo' { /UCONVERT } , [TPlusToRTF, TPlusToHtml]);
-end;
 
 { TPlusToFormattedText }
 

@@ -8,6 +8,13 @@ package PlusMemoDes;
 {$R 'HtmlHilitReg.dcr'}
 {$R 'EmailHilitReg.dcr'}
 {$R 'SQLHilitReg.dcr'}
+{$R 'PlustoFmtReg.dcr'}
+{$R 'CollapseReg.dcr'}
+{$R 'PlusGutReg.dcr'}
+{$R 'NbHilitReg.dcr'}
+{$R 'UrlHilitReg.dcr'}
+{$R 'RegExHilitReg.dcr'}
+{$R 'pmprintReg.dcr'}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
@@ -53,6 +60,13 @@ contains
   OOPReg in 'OOPReg.pas',
   HtmlHilitReg in 'HtmlHilitReg.pas',
   EmailHilitReg in 'EmailHilitReg.pas',
-  SQLHilitReg in 'SQLHilitReg.pas';
+  SQLHilitReg in 'SQLHilitReg.pas',
+  PlusToFmtReg in 'PlusToFmtReg.pas',
+  CollapseReg in 'CollapseReg.pas',
+  PlusGutReg in 'PlusGutReg.pas',
+  NbHilitReg in 'NbHilitReg.pas',
+  URLHilitReg in 'URLHilitReg.pas',
+  RegExHilitReg in 'RegExHilitReg.pas',
+  pmPrintReg in 'pmPrintReg.pas';
 
 end.

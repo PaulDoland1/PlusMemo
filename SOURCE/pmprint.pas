@@ -185,8 +185,6 @@ type
 
   end;
 
-procedure Register;
-
 implementation
 
 uses
@@ -1306,11 +1304,6 @@ begin
     CleanupBufferMemo;
     fSelection := Value
   end
-end;
-
-procedure Register;
-begin
-  RegisterComponents( { UCONVERT } 'PlusMemo' { /UCONVERT } , [TPlusMemoPrinter]);
 end;
 
 end.

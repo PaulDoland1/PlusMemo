@@ -47,17 +47,10 @@ type
     property RegExStartStop: Boolean read fRegExStartStop write setRegExStartStop default False;
   end;
 
-procedure Register;
-
 implementation
 
 uses
   SysUtils;
-
-procedure Register;
-begin
-  RegisterComponents( { UCONVERT } 'PlusMemo' { /UCONVERT } , [TRegExHighlighter])
-end;
 
 { TRegExpHighlighter }
 

@@ -119,8 +119,8 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DllSuffix>$(Auto)</DllSuffix>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_BplOutput>$(BDSCOMMONDIR)\BPL</DCC_BplOutput>
-        <DCC_DcpOutput>$(BDSCOMMONDIR)\DCP</DCC_DcpOutput>
+        <DCC_BplOutput>$(BDSCOMMONDIR)\BPL\$(Platform)</DCC_BplOutput>
+        <DCC_DcpOutput>$(BDSCOMMONDIR)\DCP\$(Platform)</DCC_DcpOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -145,6 +145,13 @@
         <DCCReference Include="HtmlHilitReg.dcr"/>
         <DCCReference Include="EmailHilitReg.dcr"/>
         <DCCReference Include="SQLHilitReg.dcr"/>
+        <DCCReference Include="PlustoFmtReg.dcr"/>
+        <DCCReference Include="CollapseReg.dcr"/>
+        <DCCReference Include="PlusGutReg.dcr"/>
+        <DCCReference Include="NbHilitReg.dcr"/>
+        <DCCReference Include="UrlHilitReg.dcr"/>
+        <DCCReference Include="RegExHilitReg.dcr"/>
+        <DCCReference Include="pmprintReg.dcr"/>
         <DCCReference Include="PlusMemoRun.dcp"/>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="vcl.dcp"/>
@@ -159,6 +166,13 @@
         <DCCReference Include="HtmlHilitReg.pas"/>
         <DCCReference Include="EmailHilitReg.pas"/>
         <DCCReference Include="SQLHilitReg.pas"/>
+        <DCCReference Include="PlusToFmtReg.pas"/>
+        <DCCReference Include="CollapseReg.pas"/>
+        <DCCReference Include="PlusGutReg.pas"/>
+        <DCCReference Include="NbHilitReg.pas"/>
+        <DCCReference Include="URLHilitReg.pas"/>
+        <DCCReference Include="RegExHilitReg.pas"/>
+        <DCCReference Include="pmPrintReg.pas"/>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

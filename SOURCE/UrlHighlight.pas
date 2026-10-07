@@ -95,8 +95,6 @@ type
     property OnURLLaunch: TURLLaunchEvent read fOnUrlLaunch write fOnUrlLaunch;
   end;
 
-procedure Register;
-
 implementation
 
 uses
@@ -570,11 +568,6 @@ begin
   fNav1.fPMemo := nil;
   fNav2.fPMemo := nil
 end; { ApplyKeywordsList }
-
-procedure Register;
-begin
-  RegisterComponents( { UCONVERT } 'PlusMemo' { /UCONVERT } , [TURLHighlighter])
-end;
 
 var i, klen: Integer;
 

@@ -155,19 +155,12 @@ type
     property OnMouseUp;
   end;
 
-procedure Register;
-
 implementation
 
 uses
   Types, Windows, SysUtils, Forms, ImgList;
 
 var gBookmarkIcons: TImageList;
-
-procedure Register;
-begin
-  RegisterComponents( { UCONVERT } 'PlusMemo' { /UCONVERT } , [TPlusGutter]);
-end;
 
 const
   HotKeys: set of AnsiChar = ['0'..'9'];

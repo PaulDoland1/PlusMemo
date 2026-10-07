@@ -119,8 +119,8 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DllSuffix>$(Auto)</DllSuffix>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_DcpOutput>$(BDSCOMMONDIR)\DCP</DCC_DcpOutput>
-        <DCC_BplOutput>$(BDSCOMMONDIR)\BPL</DCC_BplOutput>
+        <DCC_DcpOutput>$(BDSCOMMONDIR)\DCP\$(Platform)</DCC_DcpOutput>
+        <DCC_BplOutput>$(BDSCOMMONDIR)\BPL\$(Platform)</DCC_BplOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -138,13 +138,6 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="pmCollapseHandler.dcr"/>
-        <DCCReference Include="PlusGutter.dcr"/>
-        <DCCReference Include="NbHilit.dcr"/>
-        <DCCReference Include="UrlHighlight.dcr"/>
-        <DCCReference Include="pmprint.dcr"/>
-        <DCCReference Include="PlusToFormat.dcr"/>
-        <DCCReference Include="RegExHilit.dcr"/>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="vcl.dcp"/>
         <DCCReference Include="xmlrtl.dcp"/>
