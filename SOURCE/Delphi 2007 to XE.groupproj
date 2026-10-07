@@ -1,0 +1,44 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{ab0f44ae-b99c-4855-9871-6d46f71101b3}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="PlsMemDes.dproj" />
+    <Projects Include="PlsMemRun.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="PlsMemRun">
+    <MSBuild Projects="PlsMemRun.dproj" Targets="" />
+  </Target>
+  <Target Name="PlsMemRun:Clean">
+    <MSBuild Projects="PlsMemRun.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="PlsMemRun:Make">
+    <MSBuild Projects="PlsMemRun.dproj" Targets="Make" />
+  </Target>
+  <Target Name="PlsMemDes">
+    <MSBuild Projects="PlsMemDes.dproj" Targets="" />
+  </Target>
+  <Target Name="PlsMemDes:Clean">
+    <MSBuild Projects="PlsMemDes.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="PlsMemDes:Make">
+    <MSBuild Projects="PlsMemDes.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="PlsMemRun;PlsMemDes" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="PlsMemRun:Clean;PlsMemDes:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="PlsMemRun:Make;PlsMemDes:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>
