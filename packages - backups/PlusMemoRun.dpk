@@ -1,13 +1,6 @@
 package PlusMemoRun;
 
 {$R *.res}
-{$R 'pmCollapseHandler.dcr'}
-{$R 'PlusGutter.dcr'}
-{$R 'NbHilit.dcr'}
-{$R 'UrlHighlight.dcr'}
-{$R 'pmprint.dcr'}
-{$R 'PlusToFormat.dcr'}
-{$R 'RegExHilit.dcr'}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
