@@ -1,7 +1,9 @@
 PlusMemo by Electro-Concept Mauricie and Raymond Courteau used to be a commercial product but is now FREE!  The license is the extremely open MIT license.
 
 
+
 PlusMemo is the coolest enhanced memo edit control for Delphi 2009 on up. Native VCL component, in standard and data aware versions, with the following main features:
+
 
 
 * Automatic syntax highlighting: keywords, comments and custom syntaxing algorithms. You won't believe how simple it is to automatically and dynamically format your keywords!
@@ -12,36 +14,58 @@ PlusMemo is the coolest enhanced memo edit control for Delphi 2009 on up. Native
 * Not a true RTF component, but has RTF-like capabilities and can export RTF and HTML files.
 
 
+
 User docs are available online here:
 https://www.ecmqc.com/plusmemo/Docs/Content.html
 I have also provided a .CHM file, and a PDF file in the DOCUMENTATION folder.
 
 
-Within the SOURCE folder, you should find PlusMemo.groupproj and associated .dpk and .dproj files for design and runtime packages.  These should install in any version of Delphi or C++ Builder, 10.4 Syndey or later for either 32 bit or 64 bit.  It has been tested up to Delphi 13 Florence but the packages are designed to hopefully install in future versions as well unless Embarcadero makes a code-breaking change.
+
+Within the SOURCE folder, you should find group projects:
 
 
-Thus it should just be a matter of opening PlusMemo.groupproj from the SOURCE folder into any version of Delphi 10.4 Sydney or later and compiling the runtime and design-time packages. It supports both 32-bit and 64-bit. Compile either or both. Then add the SOURCE directory to your library search in Delphi/C++ Builder for 32-bit and/or 64-bit depending on what you need.
+
+"Delphi 2006 to XE.groupproj"		For Delphi versions from Delphi 2006 to Delphi XE
+
+"Delphi XE2 to 10dot3.groupproj"	For Delphi versions XE2 to Delphi 10.3 Rio
+
+"Delphi 10dot4 Up.groupproj"		For All versions from Delphi 10.4 Sydney on up
 
 
-You can install the 32-bit design-time package into a 32-bit IDE.  Starting with Delphi 12.3, there is now a 64-bit IDE. you can install the 64-bit design-time package into a 64-bit IDE.
+
+You will also find the associated .dpk and .dproj files for design and runtime packages.  And of the rest of the source files.  Note that the last one, "Delphi 10dot4 Up.groupproj" should work with all versions of Delphi 10.4 Sydney on up, including future versions unless Embarcadero makes a code-breaking change.  Open the appropriate groupproj for your version of Delphi.  Compile the runtime package as 32-bit and/or 64-bit as you require.  Then compile the design-time package as 32-bit and/or 64-bit as you require.  You can install the 32-bit design-time package into a 32-bit IDE.  You can install the 64-bit design-time package into a 64-bit IDE.  This requires Delphi 12.3 or later.
+
+
+
+The procedure is almost the same for the older versions of Delphi.  But you have to do one additional step.  When you open "Delphi 2006 to XE.groupproj" or "Delphi XE2 to 10dot3.groupproj" you will see the names of the packages as "PMemo7Run????" and "PMemo7Des????".  Go to the project options for PMemo7Run????.bpl.  Go to Description.  Delete "????" from "LIB Suffix".  Select Target as All Configurations.  Set "LIB Suffix" to something appropriate for your version of Delphi. For example, if you are running Delphi 2009, a good choice would be "D2009".  You should see the package name change to PMemo7Run.bpl.  Repeat this procedure for PMemo7Des.bpl.  
+
 
 
 (Note specifically for Sydney:  In 10.4.0, the IDE did not understand the $LIBSUFFIX AUTO option, but the compiler did. So, it should work.  But the 10.4.0 IDE might make errors in the package files if you save them within the IDE.  I would suggest consider getting the 10.4.1 or 10.4.2 update that has full $LIBSUFFIX AUTO support and other fixes unless you have some reason not to.)
 
 
-For versions from D2006 to 10.3 Rio, you will find old-style project files for each version of Delphi in the "Packages – backups" folder. These are separate for 32-bit and 64-bit. They are combined design-time/runtime packages. Copy the version for your compiler from into the SOURCE folder.  Open that package into your version of Delphi and install.  Add the SOURCE folder to your library path. For even older versions of Delphi, see very-old-delphi.txt.
+
+For even older versions of Delphi, see the "Legacy-7.2" folder. 
 
 
-Note that the compiled output (.DCU files, etc.) will be different for different versions of Delphi, C++ Builder. So it is advisable to use different directories for different Delphi versions. 
+
+Note that the compiled output (.DCU files, etc.) will be different for different versions of Delphi, C++ Builder. So it is advisable to use different directories for different Delphi versions.
+
 
 
 Note that when you install PlusMemo, the Delphi IDE will want to update the .dproj files to the version of Delphi that you are using.  Therefore I put extra copies of the package project files into the "Packages - backups" just for possible convenience.
 
 
+
 The default installation does NOT include the DB-aware version of PlusMemo. I don't know if many people use it.  But it exists. According to Raymond, to use the DB-aware version, you just need to add Plusdb.pas and Plusdb.dcr to the package. But you also need to add some of the Delphi DB packages and for some reason I had trouble with that.  So I just left them out like Raymond did.  I may try to revisit this in the future if requested.
+
 
 
 There are files related to the Addict spell check component.  ad4PlusMemoParser and adLiveSpellCheck4.  I've never used Addict and I believe it is discontinued.  They are not included in the PlusMemo packages by default.  Add them if you need them.  There is an open-source spell check component known as Hunspell which I've never used either.  Perhaps it can be integrated into PlusMemo but I have no experience.
 
 
+
 Once installed, you might want to build the demo application in the "Notepad Plus (demo)" folder and experiment with it.
+
+
+
