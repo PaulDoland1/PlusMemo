@@ -1,0 +1,61 @@
+The main source included in this distribution has been tested as far back as D2006 and 
+will not work with anything earlier. If you really need to use PlusMemo with something 
+earlier, you might be able to use the code here.
+
+This is the Legacy 7.2 code.  The packages here are combined design-time and runtime.
+They are separate for 32-bit and 64-bit.  I've included all the legacy packages from
+D2006 until 10.3 Rio. But, you probably should use the 7.5 code if possible.
+
+For something even older than D2006, do the following.
+
+Copy PMemo7D2009.dpk to something appropriate for your version of Delphi. For example,
+if you are using Delphi 7, you might copy it to PMemo7D7.dpk.  Edit the top line of the
+file to match the file name.  Ex:  Package PMemo7D7
+
+Open that package into your copy of Delphi and let it build the .dproj or .bdsproj file
+appropriate for your version of Delphi.  You probably should set the output directories
+to something like $(BDSCOMMONDIR)\DCP for DCP files and $(BDSCOMMONDIR)\BPL for BPL files.
+You might look at some of your other packages for guidance.
+
+As a suggestion, I would suggest editing PMSupport.pas and replace the version of 
+TPlusParaStrings.Add with the 7.5 version below.
+
+I also suggest either completely comment out umBackground, or simply remember to not use 
+it.  It is the default, but buggy.  I suggest using umOnNeed. It works well for me.
+
+This (hopefully) should install in your version of Delphi. If not, well, we gave it a shot. 
+
+
+// Version 7.5 update. Now much faster!
+function TPlusParaStrings.Add(const s: { UCONVERT } string { /UCONVERT } ): Integer;
+var
+  splist: TParagraphsList; snewp: ParInfo;
+  pmemo: TPlusMemo;
+begin
+  pmemo := TPlusMemo(Memo);
+  pmemo.BeginUpdate;
+  splist := pmemo.IParList;
+  splist.fModified := True;
+  Result := splist.Count;
+  splist.fModStopPar := Result;
+
+  splist.fUpdateStopPar := Result;
+  snewp.ParState := [pmpOwnTextBuffer];
+  snewp.ParLength := Length(s);
+  if snewp.ParLength > 0 then
+  begin
+    snewp.ParText := StrAlloc(Length(s) + 1);
+    System.Move(s[1], snewp.ParText^, SizeOf(s[1]) * snewp.ParLength);
+    snewp.ParText[snewp.ParLength] := #0
+  end else
+    snewp.ParText := nil;
+  snewp.BlockState := [];
+  snewp.StartOffset := splist.fTextLen + 2;
+  snewp.StartLine := splist.fVisibleLineCount;
+  Inc(splist.fTextLen, snewp.ParLength + 2);
+  Inc(splist.fVisibleLineCount);
+  Inc(splist.fTrueLineCount);
+  Inc(splist.fModLinesOffset);
+  splist.Add(snewp);
+  PMemo.EndUpdate;
+end;
