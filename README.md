@@ -1,7 +1,7 @@
 PlusMemo by Electro-Concept Mauricie and Raymond Courteau used to be a commercial product but is now FREE!  The license is the extremely open MIT license.
 
 
-PlusMemo is the coolest enhanced memo edit control for Delphi 2009 on up. Native VCL component, in standard and data aware versions, with the following main features:
+PlusMemo is the coolest enhanced memo edit control for Delphi 2006 on up. Native VCL component, in standard and data aware versions, with the following main features:
 
 
 * Automatic syntax highlighting: keywords, comments and custom syntaxing algorithms. You won't believe how simple it is to automatically and dynamically format your keywords!
