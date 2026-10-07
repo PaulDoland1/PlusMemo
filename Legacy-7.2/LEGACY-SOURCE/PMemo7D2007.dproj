@@ -1,0 +1,140 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{16db45a3-4755-490e-9a58-f5f5f656f3e2}</ProjectGuid>
+    <MainSource>PMemo7D2007.dpk</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>..\..\Delphi2007\Bpl\PMemo7D2007.bpl</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType>Package</Borland.ProjectType>
+    <BorlandProject>
+<BorlandProject xmlns=""> <Delphi.Personality>   <Parameters>
+      <Parameters Name="UseLauncher">False</Parameters>
+      <Parameters Name="LoadAllSymbols">True</Parameters>
+      <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+    </Parameters>
+    <Package_Options>
+      <Package_Options Name="PackageDescription">PlusMemo v7 and accessories</Package_Options>
+      <Package_Options Name="ImplicitBuild">True</Package_Options>
+      <Package_Options Name="DesigntimeOnly">True</Package_Options>
+      <Package_Options Name="RuntimeOnly">False</Package_Options>
+    </Package_Options>
+    <VersionInfo>
+      <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+      <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+      <VersionInfo Name="MajorVer">1</VersionInfo>
+      <VersionInfo Name="MinorVer">0</VersionInfo>
+      <VersionInfo Name="Release">0</VersionInfo>
+      <VersionInfo Name="Build">0</VersionInfo>
+      <VersionInfo Name="Debug">False</VersionInfo>
+      <VersionInfo Name="PreRelease">False</VersionInfo>
+      <VersionInfo Name="Special">False</VersionInfo>
+      <VersionInfo Name="Private">False</VersionInfo>
+      <VersionInfo Name="DLL">False</VersionInfo>
+      <VersionInfo Name="Locale">1033</VersionInfo>
+      <VersionInfo Name="CodePage">1252</VersionInfo>
+    </VersionInfo>
+    <VersionInfoKeys>
+      <VersionInfoKeys Name="CompanyName"></VersionInfoKeys>
+      <VersionInfoKeys Name="FileDescription"></VersionInfoKeys>
+      <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+      <VersionInfoKeys Name="InternalName"></VersionInfoKeys>
+      <VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys>
+      <VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys>
+      <VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys>
+      <VersionInfoKeys Name="ProductName"></VersionInfoKeys>
+      <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+      <VersionInfoKeys Name="Comments"></VersionInfoKeys>
+    </VersionInfoKeys>
+    <Source>
+      <Source Name="MainSource">PMemo7D2007.dpk</Source>
+    </Source>
+  </Delphi.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <ItemGroup />
+  <ItemGroup>
+    <DelphiCompile Include="PMemo7D2007.dpk">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="C:\Program Files (x86)\CodeGear\RAD Studio\5.0\bin\designide.dcp" />
+    <DCCReference Include="C:\Program Files (x86)\CodeGear\RAD Studio\5.0\bin\rtl.dcp" />
+    <DCCReference Include="C:\Program Files (x86)\CodeGear\RAD Studio\5.0\bin\vcl.dcp" />
+    <DCCReference Include="C:\Program Files (x86)\CodeGear\RAD Studio\5.0\bin\vclactnband.dcp" />
+    <DCCReference Include="C:\Program Files (x86)\CodeGear\RAD Studio\5.0\bin\vclx.dcp" />
+    <DCCReference Include="C:\Program Files (x86)\CodeGear\RAD Studio\5.0\bin\xmlrtl.dcp" />
+    <DCCReference Include="CPPHilit.pas" />
+    <DCCReference Include="CPPReg.dcr" />
+    <DCCReference Include="CPPReg.dcr" />
+    <DCCReference Include="CPPReg.pas" />
+    <DCCReference Include="EmailHilit.pas" />
+    <DCCReference Include="EmailHilitReg.dcr" />
+    <DCCReference Include="EmailHilitReg.dcr" />
+    <DCCReference Include="EmailHilitReg.pas" />
+    <DCCReference Include="ExtHilit.pas" />
+    <DCCReference Include="ExtHilitReg.dcr" />
+    <DCCReference Include="ExtHilitReg.dcr" />
+    <DCCReference Include="ExtHilitReg.pas" />
+    <DCCReference Include="HtmlHighlight.pas" />
+    <DCCReference Include="HtmlHilitReg.dcr" />
+    <DCCReference Include="HtmlHilitReg.dcr" />
+    <DCCReference Include="HtmlHilitReg.pas" />
+    <DCCReference Include="NbHilit.dcr" />
+    <DCCReference Include="NbHilit.dcr" />
+    <DCCReference Include="NbHilit.pas" />
+    <DCCReference Include="OOPHilit.pas" />
+    <DCCReference Include="OOPReg.dcr" />
+    <DCCReference Include="OOPReg.dcr" />
+    <DCCReference Include="OOPReg.pas" />
+    <DCCReference Include="PlusGutter.dcr" />
+    <DCCReference Include="PlusGutter.dcr" />
+    <DCCReference Include="PlusGutter.pas" />
+    <DCCReference Include="PlusKeys.pas">
+      <Form>DlgExtKeysEditor</Form>
+    </DCCReference>
+    <DCCReference Include="PlusLns.pas">
+      <Form>FrmPlusLines</Form>
+    </DCCReference>
+    <DCCReference Include="PlusMemo.pas" />
+    <DCCReference Include="PlusToFormat.dcr" />
+    <DCCReference Include="PlusToFormat.dcr" />
+    <DCCReference Include="PlusToFormat.pas" />
+    <DCCReference Include="pmActions.pas" />
+    <DCCReference Include="pmCollapseHandler.dcr" />
+    <DCCReference Include="pmCollapseHandler.dcr" />
+    <DCCReference Include="pmCollapseHandler.pas" />
+    <DCCReference Include="pmemoreg.dcr" />
+    <DCCReference Include="pmemoreg.dcr" />
+    <DCCReference Include="pmemoreg.pas" />
+    <DCCReference Include="pmpprev.pas">
+      <Form>FrmPMPrintPreview</Form>
+    </DCCReference>
+    <DCCReference Include="pmprint.dcr" />
+    <DCCReference Include="pmprint.dcr" />
+    <DCCReference Include="pmprint.pas" />
+    <DCCReference Include="PMSupport.pas" />
+    <DCCReference Include="RegExHilit.dcr" />
+    <DCCReference Include="RegExHilit.dcr" />
+    <DCCReference Include="SQLHilit.pas" />
+    <DCCReference Include="SQLHilitReg.dcr" />
+    <DCCReference Include="SQLHilitReg.dcr" />
+    <DCCReference Include="SQLHilitReg.pas" />
+    <DCCReference Include="UrlHighlight.dcr" />
+    <DCCReference Include="UrlHighlight.dcr" />
+    <DCCReference Include="UrlHighlight.pas" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+</Project>
