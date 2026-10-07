@@ -99,7 +99,7 @@
 			<DCCReference Include="UrlHilitReg.dcr"/>
 			<DCCReference Include="RegExHilitReg.dcr"/>
 			<DCCReference Include="pmprintReg.dcr"/>
-			<DCCReference Include="PlusMemoRun.dcp"/>
+			<DCCReference Include="PMemo7Run.dcp"/>
 			<DCCReference Include="rtl.dcp"/>
 			<DCCReference Include="vcl.dcp"/>
 			<DCCReference Include="xmlrtl.dcp"/>
