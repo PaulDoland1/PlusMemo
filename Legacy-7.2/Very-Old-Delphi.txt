@@ -1,4 +1,4 @@
-The main source included in this distribution has been tested as far back as D2006 and 
+The main source included in this distribution has been tested as far back as D2007 and 
 will not work with anything earlier. If you really need to use PlusMemo with something 
 earlier, you might be able to use the code here.
 
@@ -6,9 +6,10 @@ This is the Legacy 7.2 code.  The packages here are combined design-time and run
 They are separate for 32-bit and 64-bit.  I've included all the legacy packages from
 D2006 until 10.3 Rio. But, you probably should use the 7.5 code if possible.
 
+Note that D2006 packages are here, one version earlier than supported by the 7.5 packages.  
 For something even older than D2006, do the following.
 
-Copy PMemo7D2009.dpk to something appropriate for your version of Delphi. For example,
+Copy PMemo7D2006.dpk to something appropriate for your version of Delphi. For example,
 if you are using Delphi 7, you might copy it to PMemo7D7.dpk.  Edit the top line of the
 file to match the file name.  Ex:  Package PMemo7D7
 
