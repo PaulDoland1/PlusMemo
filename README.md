@@ -48,10 +48,10 @@ Note that the compiled output (.DCU files, etc.) will be different for different
 Note that when you install PlusMemo, the Delphi IDE will want to update the .dproj files to the version of Delphi that you are using.  Therefore I put extra copies of the package project files into the "Packages - backups" just for possible convenience.
 
 
-The default installation does NOT include the DB-aware version of PlusMemo. I don't know if many people use it.  But it exists. According to Raymond, to use the DB-aware version, you just need to add Plusdb.pas and Plusdb.dcr to the package. But you also need to add some of the Delphi DB packages and for some reason I had trouble with that.  So I just left them out like Raymond did.  I may try to revisit this in the future if requested.
+The default installation does NOT include the DB-aware version of PlusMemo. I don't know if many people use it.  It was always left out of the default install so I left it out also.  If you want to use it, add PlusDb.pas to the runtime package and PlusDbReg.pas to the design-time package.  The IDE will tell you it needs to add some DB related packages.
 
 
-There are files related to the Addict spell check component.  ad4PlusMemoParser and adLiveSpellCheck4.  I've never used Addict and I believe it is discontinued.  They are not included in the PlusMemo packages by default.  Add them if you need them.  There is an open-source spell check component known as Hunspell which I've never used either.  Perhaps it can be integrated into PlusMemo but I have no experience.
+There are files related to the Addict spell check component.  PMLiveSpell4, PMLiveSpellReg, ad4PlusMemoParser and adLiveSpellCheck4.  I've never used Addict and I believe it is discontinued.  They are not included in the PlusMemo packages by default.  Add them if you need them.  There is an open-source spell check component known as Hunspell which I've never used either.  Perhaps it can be integrated into PlusMemo but I have no experience.
 
 
 Once installed, you might want to build the demo application in the "Notepad Plus (demo)" folder and experiment with it.
