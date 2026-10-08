@@ -63,8 +63,6 @@ type
     property ReadOnly: Boolean read GetReadOnly write SetReadOnly default False;
   end;
 
-procedure Register;
-
 implementation
 
 uses
@@ -337,11 +335,6 @@ begin
     LoadMemo
   else
     inherited;
-end;
-
-procedure Register;
-begin
-  RegisterComponents('ECM', [TDBPlusMemo])
 end;
 
 procedure TDBPlusMemo.WMPaint(var Message: TWMPaint);

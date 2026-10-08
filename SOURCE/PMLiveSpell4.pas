@@ -57,17 +57,10 @@ type
     property OnSuggestPopup: TSuggestPopupEvent read fOnSuggestPopup write fOnSuggestPopup;
   end;
 
-procedure Register;
-
 implementation
 
 uses
   SysUtils, Graphics, Windows, Controls, ad3ParserBase, ad3Configuration, ad4PlusMemoParser;
-
-procedure Register;
-begin
-  RegisterComponents( { UCONVERT } 'PlusMemo' { /UCONVERT } , [TPMLiveSpell4]);
-end;
 
 {$IFDEF PMLiveSpell4U}
 
