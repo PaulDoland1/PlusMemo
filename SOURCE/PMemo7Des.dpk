@@ -39,7 +39,7 @@ package PMemo7Des;
 {$IMAGEBASE $400000}
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
-{$DESCRIPTION 'PlusMemo v7 and accessories'}
+{$DESCRIPTION 'PlusMemo v7.5 and accessories'}
 {$LIBSUFFIX '????'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}

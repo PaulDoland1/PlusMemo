@@ -1,4 +1,4 @@
-package PlsMemDes;
+package PlsMemDbDes;
 
 {$R *.res}
 {$R 'pmemoreg.dcr'}
@@ -15,6 +15,7 @@ package PlsMemDes;
 {$R 'UrlHilitReg.dcr'}
 {$R 'RegExHilitReg.dcr'}
 {$R 'pmprintReg.dcr'}
+{$R 'PlusDbReg.dcr'}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -36,14 +37,14 @@ package PlsMemDes;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
-{$DESCRIPTION 'PlusMemo v7.5 and accessories'}
+{$DESCRIPTION 'PlusMemo Db Components'}
 {$LIBSUFFIX '????'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
 {$DEFINE RELEASE}
 
 requires
-  PlsMemRun,
+  PlsMemDbRun,
   rtl,
   vcl,
   xmlrtl,
@@ -52,19 +53,6 @@ requires
   designide;
 
 contains
-  pmemoreg in 'pmemoreg.pas',
-  ExtHilitReg in 'ExtHilitReg.pas',
-  CPPReg in 'CPPReg.pas',
-  OOPReg in 'OOPReg.pas',
-  HtmlHilitReg in 'HtmlHilitReg.pas',
-  EmailHilitReg in 'EmailHilitReg.pas',
-  SQLHilitReg in 'SQLHilitReg.pas',
-  PlusToFmtReg in 'PlusToFmtReg.pas',
-  CollapseReg in 'CollapseReg.pas',
-  PlusGutReg in 'PlusGutReg.pas',
-  NbHilitReg in 'NbHilitReg.pas',
-  URLHilitReg in 'URLHilitReg.pas',
-  RegExHilitReg in 'RegExHilitReg.pas',
-  pmPrintReg in 'pmPrintReg.pas';
+  PlusDbReg in 'PlusDbReg.pas';
 
 end.
