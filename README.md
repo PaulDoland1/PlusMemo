@@ -31,16 +31,20 @@ Within the SOURCE folder, you should find group projects:
 You will also find the associated .dpk and .dproj files for design and runtime packages.  And of the rest of the source files.  Note that the last one, "Delphi 10dot4 Up.groupproj" should work with all versions of Delphi 10.4 Sydney on up, including future versions unless Embarcadero makes a code-breaking change.  Open the appropriate groupproj for your version of Delphi.
 
 
-If you are using Delphi 10.4 Sydney or later, the installation is dead simple.  Just compile the runtime package as 32-bit and/or 64-bit as you require.  Then compile and install the design-time package.  The 64-bit design-time package requires a 64-bit IDE, which requires Delphi 12.3 or later.  While, naturally, you can install the 32-bit design-time package into the 32-bit IDE.
+Once you open the groupproj, you should find four projects. The primary runtime project, the primary design-time project, a supplemental DB runtime project and a supplemental DB design-time project.  In 7.2 and earlier, the DB component wasn't even a standard install, you had to manually add it yourself if you wanted it.  Therefore, I don't think many people ever used it.  You can choose to install the DB packages or not.
 
 
-The procedure is almost the same for the older versions of Delphi.  But you have a little bit extra to do.  When you open "Delphi 2006 to XE.groupproj" or "Delphi XE2 to 10dot3.groupproj" you will see the names of the packages as "PMemo7Run????" and "PMemo7Des????".  Go to the project options for the run-time package.  Go to Description.  Delete "????" from "LIB Suffix".  Select Target as All Configurations.  Set "LIB Suffix" to something appropriate for your version of Delphi. For example, if you are running Delphi 2009, a good choice would be "D2009".  Repeat this procedure for the design-time package.  
+If you are using Delphi 10.4 Sydney or later, the installation is dead simple.  Just compile the runtime package(s) as 32-bit and/or 64-bit as you require.  Then compile and install the design-time package(s).  The 64-bit design-time packages requires a 64-bit IDE, which requires Delphi 12.3 or later.  While, naturally, you can install the 32-bit design-time packages into the 32-bit IDE.
+
+
+The procedure is almost the same for the older versions of Delphi.  But you have a little bit extra to do.  When you open "Delphi 2006 to XE.groupproj" or "Delphi XE2 to 10dot3.groupproj" you will see the names of the packages as "PMemo7Run????" and "PMemo7Des????".  For each package you need, go to the project options.  Go to Description.  Delete "????" from "LIB Suffix".  Select Target as All Configurations.  Set "LIB Suffix" to something appropriate for your version of Delphi. For example, if you are running Delphi 2009, a good choice would be "D2009".
 
 
 (Note specifically for Sydney:  In 10.4.0, the IDE did not understand the $LIBSUFFIX AUTO option, but the compiler did. So, it should work.  But the 10.4.0 IDE might make errors in the package files if you save them within the IDE.  I would suggest consider getting the 10.4.1 or 10.4.2 update that has full $LIBSUFFIX AUTO support and other fixes unless you have some reason not to.)
 
 
 (NOTE:  So that all three sets of packages can live in the same SOURCE folder, they have slightly different base package names.)
+
 
 For even older versions of Delphi, see the "Legacy-7.2" folder. 
 
@@ -49,9 +53,6 @@ Note that the compiled output (.DCU files, etc.) will be different for different
 
 
 Note that when you install PlusMemo, the Delphi IDE will want to update the .dproj files to the version of Delphi that you are using.  Therefore I put extra copies of the package project files into the "Packages - backups" just for possible convenience.
-
-
-The default installation does NOT include the DB-aware version of PlusMemo. I don't know if many people use it.  It was always left out of the default install so I left it out also.  If you want to use it, add PlusDb.pas to the runtime package and PlusDbReg.pas to the design-time package.  The IDE will tell you it needs to add some DB related packages.
 
 
 There are files related to the Addict spell check component.  PMLiveSpell4, PMLiveSpellReg, ad4PlusMemoParser and adLiveSpellCheck4.  I've never used Addict and I believe it is discontinued.  They are not included in the PlusMemo packages by default.  Add them if you need them.  There is an open-source spell check component known as Hunspell which I've never used either.  Perhaps it can be integrated into PlusMemo but I have no experience.
