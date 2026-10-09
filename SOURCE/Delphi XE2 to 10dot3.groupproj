@@ -1,48 +1,72 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <ProjectGuid>{EC6E3FB0-1431-4561-A722-F7B9A3A049AB}</ProjectGuid>
-    </PropertyGroup>
-    <ItemGroup>
-        <Projects Include="PMemo7Run.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="PMemo7Des.dproj">
-            <Dependencies/>
-        </Projects>
-    </ItemGroup>
-    <ProjectExtensions>
-        <Borland.Personality>Default.Personality.12</Borland.Personality>
-        <Borland.ProjectType/>
-        <BorlandProject>
-            <Default.Personality/>
-        </BorlandProject>
-    </ProjectExtensions>
-    <Target Name="PMemo7Run">
-        <MSBuild Projects="PMemo7Run.dproj"/>
-    </Target>
-    <Target Name="PMemo7Run:Clean">
-        <MSBuild Projects="PMemo7Run.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="PMemo7Run:Make">
-        <MSBuild Projects="PMemo7Run.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="PMemo7Des">
-        <MSBuild Projects="PMemo7Des.dproj"/>
-    </Target>
-    <Target Name="PMemo7Des:Clean">
-        <MSBuild Projects="PMemo7Des.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="PMemo7Des:Make">
-        <MSBuild Projects="PMemo7Des.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="Build">
-        <CallTarget Targets="PMemo7Run;PMemo7Des"/>
-    </Target>
-    <Target Name="Clean">
-        <CallTarget Targets="PMemo7Run:Clean;PMemo7Des:Clean"/>
-    </Target>
-    <Target Name="Make">
-        <CallTarget Targets="PMemo7Run:Make;PMemo7Des:Make"/>
-    </Target>
-    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
-</Project>
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{EC6E3FB0-1431-4561-A722-F7B9A3A049AB}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="PMemo7Run.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="PMemo7Des.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="PMemo7DbRun.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="PMemo7DbDes.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="PMemo7Run">
+			<MSBuild Projects="PMemo7Run.dproj"/>
+		</Target>
+		<Target Name="PMemo7Run:Clean">
+			<MSBuild Projects="PMemo7Run.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PMemo7Run:Make">
+			<MSBuild Projects="PMemo7Run.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="PMemo7Des">
+			<MSBuild Projects="PMemo7Des.dproj"/>
+		</Target>
+		<Target Name="PMemo7Des:Clean">
+			<MSBuild Projects="PMemo7Des.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PMemo7Des:Make">
+			<MSBuild Projects="PMemo7Des.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="PMemo7DbRun">
+			<MSBuild Projects="PMemo7DbRun.dproj"/>
+		</Target>
+		<Target Name="PMemo7DbRun:Clean">
+			<MSBuild Projects="PMemo7DbRun.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PMemo7DbRun:Make">
+			<MSBuild Projects="PMemo7DbRun.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="PMemo7DbDes">
+			<MSBuild Projects="PMemo7DbDes.dproj"/>
+		</Target>
+		<Target Name="PMemo7DbDes:Clean">
+			<MSBuild Projects="PMemo7DbDes.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PMemo7DbDes:Make">
+			<MSBuild Projects="PMemo7DbDes.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="PMemo7Run;PMemo7Des;PMemo7DbRun;PMemo7DbDes"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="PMemo7Run:Clean;PMemo7Des:Clean;PMemo7DbRun:Clean;PMemo7DbDes:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="PMemo7Run:Make;PMemo7Des:Make;PMemo7DbRun:Make;PMemo7DbDes:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>
