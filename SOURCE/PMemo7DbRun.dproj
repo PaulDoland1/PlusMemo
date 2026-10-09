@@ -92,7 +92,6 @@
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_1)'!=''">
 			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
-			<DCC_DebugInformation>true</DCC_DebugInformation>
 			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
 			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
 		</PropertyGroup>
@@ -188,4 +187,14 @@
 		</ProjectExtensions>
 		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
 		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+
+  <PropertyGroup>
+    <DCC_DebugInformation Condition=" '$(DCC_DebugInformation)'=='0' ">false</DCC_DebugInformation>
+    <DCC_DebugInformation Condition=" '$(DCC_DebugInformation)'=='1' ">true</DCC_DebugInformation>
+    <DCC_DebugInformation Condition=" '$(DCC_DebugInformation)'=='2' ">true</DCC_DebugInformation>
+    
+    <DCC_DebugInformation Condition=" '$(DCC_DebugInformation)'=='false' ">0</DCC_DebugInformation>
+    <DCC_DebugInformation Condition=" '$(DCC_DebugInformation)'=='true' ">2</DCC_DebugInformation>
+  </PropertyGroup>
+
 	</Project>
