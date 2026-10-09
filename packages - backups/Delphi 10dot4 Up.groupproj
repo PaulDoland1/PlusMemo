@@ -1,12 +1,18 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{F9302407-EE79-4A8B-AAC2-7FB603BE0FA6}</ProjectGuid>
+        <ProjectGuid>{EC6E3FB0-1431-4561-A722-F7B9A3A049AB}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
         <Projects Include="PlusMemoRun.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="PlusMemoDes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PlusMemoDbRun.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PlusMemoDbDes.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -35,14 +41,32 @@
     <Target Name="PlusMemoDes:Make">
         <MSBuild Projects="PlusMemoDes.dproj" Targets="Make"/>
     </Target>
+    <Target Name="PlusMemoDbRun">
+        <MSBuild Projects="PlusMemoDbRun.dproj"/>
+    </Target>
+    <Target Name="PlusMemoDbRun:Clean">
+        <MSBuild Projects="PlusMemoDbRun.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PlusMemoDbRun:Make">
+        <MSBuild Projects="PlusMemoDbRun.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PlusMemoDbDes">
+        <MSBuild Projects="PlusMemoDbDes.dproj"/>
+    </Target>
+    <Target Name="PlusMemoDbDes:Clean">
+        <MSBuild Projects="PlusMemoDbDes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PlusMemoDbDes:Make">
+        <MSBuild Projects="PlusMemoDbDes.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PlusMemoRun;PlusMemoDes"/>
+        <CallTarget Targets="PlusMemoRun;PlusMemoDes;PlusMemoDbRun;PlusMemoDbDes"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PlusMemoRun:Clean;PlusMemoDes:Clean"/>
+        <CallTarget Targets="PlusMemoRun:Clean;PlusMemoDes:Clean;PlusMemoDbRun:Clean;PlusMemoDbDes:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PlusMemoRun:Make;PlusMemoDes:Make"/>
+        <CallTarget Targets="PlusMemoRun:Make;PlusMemoDes:Make;PlusMemoDbRun:Make;PlusMemoDbDes:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
