@@ -4,6 +4,8 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
+    <Projects Include="PlsMemDbDes.dproj" />
+    <Projects Include="PlsMemDbRun.dproj" />
     <Projects Include="PlsMemDes.dproj" />
     <Projects Include="PlsMemRun.dproj" />
   </ItemGroup>
@@ -11,7 +13,7 @@
     <Borland.Personality>Default.Personality</Borland.Personality>
     <Borland.ProjectType />
     <BorlandProject>
-  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+<BorlandProject xmlns=""><Default.Personality></Default.Personality></BorlandProject></BorlandProject>
   </ProjectExtensions>
   <Target Name="PlsMemRun">
     <MSBuild Projects="PlsMemRun.dproj" Targets="" />
@@ -31,14 +33,32 @@
   <Target Name="PlsMemDes:Make">
     <MSBuild Projects="PlsMemDes.dproj" Targets="Make" />
   </Target>
+  <Target Name="PlsMemDbRun">
+    <MSBuild Projects="PlsMemDbRun.dproj" Targets="" />
+  </Target>
+  <Target Name="PlsMemDbRun:Clean">
+    <MSBuild Projects="PlsMemDbRun.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="PlsMemDbRun:Make">
+    <MSBuild Projects="PlsMemDbRun.dproj" Targets="Make" />
+  </Target>
+  <Target Name="PlsMemDbDes">
+    <MSBuild Projects="PlsMemDbDes.dproj" Targets="" />
+  </Target>
+  <Target Name="PlsMemDbDes:Clean">
+    <MSBuild Projects="PlsMemDbDes.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="PlsMemDbDes:Make">
+    <MSBuild Projects="PlsMemDbDes.dproj" Targets="Make" />
+  </Target>
   <Target Name="Build">
-    <CallTarget Targets="PlsMemRun;PlsMemDes" />
+    <CallTarget Targets="PlsMemRun;PlsMemDes;PlsMemDbRun;PlsMemDbDes" />
   </Target>
   <Target Name="Clean">
-    <CallTarget Targets="PlsMemRun:Clean;PlsMemDes:Clean" />
+    <CallTarget Targets="PlsMemRun:Clean;PlsMemDes:Clean;PlsMemDbRun:Clean;PlsMemDbDes:Clean" />
   </Target>
   <Target Name="Make">
-    <CallTarget Targets="PlsMemRun:Make;PlsMemDes:Make" />
+    <CallTarget Targets="PlsMemRun:Make;PlsMemDes:Make;PlsMemDbRun:Make;PlsMemDbDes:Make" />
   </Target>
   <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
 </Project>
