@@ -1,3 +1,5 @@
+{$I PM_compilers.inc}
+
 package PlsMemDbRun;
 
 {$R *.res}
@@ -24,7 +26,6 @@ package PlsMemDbRun;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DESCRIPTION 'PlusMemo Db Components'}
-{$LIBSUFFIX '????'}
 {$RUNONLY}
 {$IMPLICITBUILD ON}
 {$DEFINE RELEASE}

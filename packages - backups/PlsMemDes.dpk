@@ -1,3 +1,5 @@
+{$I PM_compilers.inc}
+
 package PlsMemDes;
 
 {$R *.res}
@@ -37,7 +39,6 @@ package PlsMemDes;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DESCRIPTION 'PlusMemo v7.5 and accessories'}
-{$LIBSUFFIX '????'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
 {$DEFINE RELEASE}
