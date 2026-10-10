@@ -222,7 +222,7 @@ begin
 end;
 
 procedure TDBPlusMemo.DataChange(Sender: TObject);
-var tmpstr: string; savedstart, savedlen: Integer;
+var tmpstr: string;
 begin
   if fInChange then
     Exit;
