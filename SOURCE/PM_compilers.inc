@@ -1,0 +1,21 @@
+//  Compiler defines for LIBSUFFIX
+
+{$IFDEF VER180} {$LIBSUFFIX '180'} {$ENDIF} // Delphi 2006         BSDVER 4.0
+{$IFDEF VER185} {$LIBSUFFIX '185'} {$ENDIF} // Delphi 2007         BSDVER 5.0
+{$IFDEF VER200} {$LIBSUFFIX '200'} {$ENDIF} // Delphi 2009         BSDVER 6.0
+{$IFDEF VER270} {$LIBSUFFIX '210'} {$ENDIF} // Delphi 2010         BSDVER 7.0
+{$IFDEF VER270} {$LIBSUFFIX '220'} {$ENDIF} // Delphi XE           BSDVER 8.0
+{$IFDEF VER270} {$LIBSUFFIX '230'} {$ENDIF} // Delphi XE2          BSDVER 9.0
+{$IFDEF VER270} {$LIBSUFFIX '240'} {$ENDIF} // Delphi XE3          BSDVER 10.0
+{$IFDEF VER270} {$LIBSUFFIX '250'} {$ENDIF} // Delphi XE4          BSDVER 11.0
+{$IFDEF VER270} {$LIBSUFFIX '260'} {$ENDIF} // Delphi XE5          BSDVER 12.0
+{$IFDEF VER270} {$LIBSUFFIX '270'} {$ENDIF} // Delphi XE6          BSDVER 14.0
+{$IFDEF VER280} {$LIBSUFFIX '280'} {$ENDIF} // Delphi XE7          BSDVER 15.0
+{$IFDEF VER290} {$LIBSUFFIX '290'} {$ENDIF} // Delphi XE8          BDSVER 16.0
+{$IFDEF VER300} {$LIBSUFFIX '300'} {$ENDIF} // Delphi 10 Seattle   BSDVER 17.0
+{$IFDEF VER310} {$LIBSUFFIX '310'} {$ENDIF} // Delphi 10.1 Berlin  BSDVER 18.0
+{$IFDEF VER320} {$LIBSUFFIX '320'} {$ENDIF} // Delphi 10.2 Tokyo   BSDVER 19.0
+{$IFDEF VER330} {$LIBSUFFIX '330'} {$ENDIF} // Delphi 10.3 Rio     BSDVER 20.0
+
+// Not needed from 10.4 Sydney on.  Will use LIBSUFFIX AUTO
+
