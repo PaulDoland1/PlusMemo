@@ -7,6 +7,7 @@
     <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
     <DCC_DependencyCheckOutputName>..\..\Delphi2007\BPL\PlsMemDbRun.bpl</DCC_DependencyCheckOutputName>
   </PropertyGroup>
+  <Import Project="PM_compilers.props" />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Version>7.0</Version>
     <DCC_DebugInformation>False</DCC_DebugInformation>
