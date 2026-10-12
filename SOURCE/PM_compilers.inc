@@ -3,11 +3,18 @@
 // NOTE:  When using AUTO on newer compilers, it uses the package version
 // for the suffix, not the compiler version.  So I am doing likewise.
 // The package version numbers might look unexpected.
+//
 
 {$IFDEF VER180} {$LIBSUFFIX '100'} {$ENDIF} // Delphi 2006         BSDVER 4.0
 {$IFDEF VER185} {$LIBSUFFIX '110'} {$ENDIF} // Delphi 2007         BSDVER 5.0
-{$IFDEF VER200} {$LIBSUFFIX '120'} {$ENDIF} // Delphi 2009         BSDVER 6.0
+
+// The way the PM_compilers.props file is coded, I can't find a way to
+// distinguish between Delphi 2009 and Delphi 2010. So I'm setting the
+// LIBSUFFIX to 140 for both. Not ideal but probably not an issue in
+// practice.
+{$IFDEF VER200} {$LIBSUFFIX '140'} {$ENDIF} // Delphi 2009         BSDVER 6.0 
 {$IFDEF VER210} {$LIBSUFFIX '140'} {$ENDIF} // Delphi 2010         BSDVER 7.0
+
 {$IFDEF VER220} {$LIBSUFFIX '150'} {$ENDIF} // Delphi XE           BSDVER 8.0
 {$IFDEF VER230} {$LIBSUFFIX '160'} {$ENDIF} // Delphi XE2          BSDVER 9.0
 {$IFDEF VER240} {$LIBSUFFIX '170'} {$ENDIF} // Delphi XE3          BSDVER 10.0
