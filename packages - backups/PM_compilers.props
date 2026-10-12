@@ -6,6 +6,7 @@
         <PropertyGroup>
             <DllSuffix>110</DllSuffix>
             <DCC_DebugInformation>False</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(PackageOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(PackageOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -14,6 +15,7 @@
         <PropertyGroup>
             <DllSuffix>140</DllSuffix>
             <DCC_DebugInformation>False</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(PackageOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(PackageOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -22,6 +24,7 @@
         <PropertyGroup>
             <DllSuffix>150</DllSuffix>
             <DCC_DebugInformation>False</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(PackageOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(PackageOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -30,6 +33,7 @@
         <PropertyGroup>
             <DllSuffix>160</DllSuffix>
             <DCC_DebugInformation>False</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -38,6 +42,7 @@
         <PropertyGroup>
             <DllSuffix>170</DllSuffix>
             <DCC_DebugInformation>False</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -46,6 +51,7 @@
         <PropertyGroup>
             <DllSuffix>180</DllSuffix>
             <DCC_DebugInformation>False</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -54,6 +60,7 @@
         <PropertyGroup>
             <DllSuffix>190</DllSuffix>
             <DCC_DebugInformation>0</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -62,6 +69,7 @@
         <PropertyGroup>
             <DllSuffix>200</DllSuffix>
             <DCC_DebugInformation>0</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -70,6 +78,7 @@
         <PropertyGroup>
             <DllSuffix>210</DllSuffix>
             <DCC_DebugInformation>0</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -78,6 +87,7 @@
         <PropertyGroup>
             <DllSuffix>220</DllSuffix>
             <DCC_DebugInformation>0</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -86,6 +96,7 @@
         <PropertyGroup>
             <DllSuffix>230</DllSuffix>
             <DCC_DebugInformation>0</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -94,6 +105,7 @@
         <PropertyGroup>
             <DllSuffix>240</DllSuffix>
             <DCC_DebugInformation>0</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -102,6 +114,7 @@
         <PropertyGroup>
             <DllSuffix>250</DllSuffix>
             <DCC_DebugInformation>0</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
@@ -110,8 +123,11 @@
         <PropertyGroup>
             <DllSuffix>260</DllSuffix>
             <DCC_DebugInformation>0</DCC_DebugInformation>
+            <PostBuildEvent>copy "$(DCC_BplOutput)\$(BasePackageName)$(DllSuffix).bpl" "$(DCC_BplOutput)\$(BasePackageName).bpl"</PostBuildEvent>
         </PropertyGroup>
     </When>
 
 </Choose>
+
+
 </Project>

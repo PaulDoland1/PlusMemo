@@ -7,10 +7,12 @@
     <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
     <DCC_DependencyCheckOutputName>..\..\Delphi2007\BPL\PlsMemRun.bpl</DCC_DependencyCheckOutputName>
   </PropertyGroup>
+  <PropertyGroup>
+      <BasePackageName>PlsMemRun</BasePackageName>
+  </PropertyGroup>
   <Import Project="PM_compilers.props" />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Version>7.0</Version>
-    <DCC_DebugInformation>False</DCC_DebugInformation>
     <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
     <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
     <DCC_Define>RELEASE</DCC_Define>
@@ -31,7 +33,6 @@
       <Excluded_Packages Name="c:\Tools\Delphi2007\Bpl\PlsMemDbRun185.bpl">PlusMemo Db Components</Excluded_Packages>
     </Excluded_Packages></Delphi.Personality></BorlandProject></BorlandProject>
   </ProjectExtensions>
-  <Import Project="PM_compilers.props" />
   <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
   <ItemGroup>
     <DelphiCompile Include="PlsMemRun.dpk">
