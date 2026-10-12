@@ -1,187 +1,175 @@
-﻿<project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <choose>
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Choose>
 
     <!-- Delphi 2007 (ProjectVersion is empty) -->
-    <when Condition="'$(ProjectVersion)' == ''">
-      <propertygroup>
-        <dllsuffix>110</dllsuffix>
-        <dcc_debuginformation>False</dcc_debuginformation>
-        <actualbplfolder>$(BDSCOMMONDIR)\BPL</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == ''">
+      <PropertyGroup>
+        <DllSuffix>110</DllSuffix>
+        <DCC_DebugInformation>False</DCC_DebugInformation>
+        <ActualBplFolder>$(BDSCOMMONDIR)\BPL</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
-    <!-- Delphi 2009 / 2010 -->
-    <when Condition="'$(ProjectVersion)' == '12.0'">
-      <propertygroup>
-        <dllsuffix>140</dllsuffix>
-        <dcc_debuginformation>False</dcc_debuginformation>
-        <actualbplfolder>$(BDSCOMMONDIR)\BPL</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <!-- Delphi 2009 / 2010 (I can't find a way to distinguish between them.)  -->
+    <When Condition="'$(ProjectVersion)' == '12.0'">
+      <PropertyGroup>
+        <DllSuffix>140</DllSuffix>
+        <DCC_DebugInformation>False</DCC_DebugInformation>
+        <ActualBplFolder>$(BDSCOMMONDIR)\BPL</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi XE -->
-    <when Condition="'$(ProjectVersion)' == '12.2' or '$(ProjectVersion)' == '12.3'">
-      <propertygroup>
-        <dllsuffix>150</dllsuffix>
-        <dcc_debuginformation>False</dcc_debuginformation>
-        <actualbplfolder>$(BDSCOMMONDIR)\BPL</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '12.2' or '$(ProjectVersion)' == '12.3'">
+      <PropertyGroup>
+        <DllSuffix>150</DllSuffix>
+        <DCC_DebugInformation>False</DCC_DebugInformation>
+        <ActualBplFolder>$(BDSCOMMONDIR)\BPL</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi XE2 -->
-    <when Condition="'$(ProjectVersion)' == '13.4'">
-      <propertygroup>
-        <dllsuffix>160</dllsuffix>
-        <dcc_debuginformation>False</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '13.4'">
+      <PropertyGroup>
+        <DllSuffix>160</DllSuffix>
+        <DCC_DebugInformation>False</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi XE3 -->
-    <when Condition="'$(ProjectVersion)' == '14.3' or '$(ProjectVersion)' == '14.4'">
-      <propertygroup>
-        <dllsuffix>170</dllsuffix>
-        <dcc_debuginformation>False</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '14.3' or '$(ProjectVersion)' == '14.4'">
+      <PropertyGroup>
+        <DllSuffix>170</DllSuffix>
+        <DCC_DebugInformation>False</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi XE4 -->
-    <when Condition="'$(ProjectVersion)' == '14.6'">
-      <propertygroup>
-        <dllsuffix>180</dllsuffix>
-        <dcc_debuginformation>False</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '14.6'">
+      <PropertyGroup>
+        <DllSuffix>180</DllSuffix>
+        <DCC_DebugInformation>False</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi XE5 -->
-    <when Condition="'$(ProjectVersion)' == '15.1' or '$(ProjectVersion)' == '15.3'">
-      <propertygroup>
-        <dllsuffix>190</dllsuffix>
-        <dcc_debuginformation>0</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '15.1' or '$(ProjectVersion)' == '15.3'">
+      <PropertyGroup>
+        <DllSuffix>190</DllSuffix>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi XE6 -->
-    <when Condition="'$(ProjectVersion)' == '15.4'">
-      <propertygroup>
-        <dllsuffix>200</dllsuffix>
-        <dcc_debuginformation>0</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '15.4'">
+      <PropertyGroup>
+        <DllSuffix>200</DllSuffix>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi XE7 -->
-    <when Condition="'$(ProjectVersion)' == '16.1' or '$(ProjectVersion)' == '16.0'">
-      <propertygroup>
-        <dllsuffix>210</dllsuffix>
-        <dcc_debuginformation>0</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '16.1' or '$(ProjectVersion)' == '16.0'">
+      <PropertyGroup>
+        <DllSuffix>210</DllSuffix>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi XE8 -->
-    <when Condition="'$(ProjectVersion)' == '17.1' or '$(ProjectVersion)' == '17.2'">
-      <propertygroup>
-        <dllsuffix>220</dllsuffix>
-        <dcc_debuginformation>0</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '17.1' or '$(ProjectVersion)' == '17.2'">
+      <PropertyGroup>
+        <DllSuffix>220</DllSuffix>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi 10 Seattle -->
-    <when Condition="'$(ProjectVersion)' == '18.0' or '$(ProjectVersion)' == '18.1'">
-      <propertygroup>
-        <dllsuffix>230</dllsuffix>
-        <dcc_debuginformation>0</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '18.0' or '$(ProjectVersion)' == '18.1'">
+      <PropertyGroup>
+        <DllSuffix>230</DllSuffix>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi 10.1 Berlin -->
-    <when Condition="'$(ProjectVersion)' == '18.2'">
-      <propertygroup>
-        <dllsuffix>240</dllsuffix>
-        <dcc_debuginformation>0</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '18.2'">
+      <PropertyGroup>
+        <DllSuffix>240</DllSuffix>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi 10.2 Tokyo -->
-    <when Condition="'$(ProjectVersion)' == '18.3' or '$(ProjectVersion)' == '18.4'">
-      <propertygroup>
-        <dllsuffix>250</dllsuffix>
-        <dcc_debuginformation>0</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '18.3' or '$(ProjectVersion)' == '18.4'">
+      <PropertyGroup>
+        <DllSuffix>250</DllSuffix>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
     <!-- Delphi 10.3 Rio -->
-    <when Condition="'$(ProjectVersion)' == '18.5' or '$(ProjectVersion)' == '18.8'">
-      <propertygroup>
-        <dllsuffix>260</dllsuffix>
-        <dcc_debuginformation>0</dcc_debuginformation>
-        <actualbplfolder>$(DCC_BplOutput)</actualbplfolder>
-        <postbuildevent>
-          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl"
-          "$(ActualBplFolder)\$(BasePackageName).bpl"
-        </postbuildevent>
-      </propertygroup>
-    </when>
+    <When Condition="'$(ProjectVersion)' == '18.5' or '$(ProjectVersion)' == '18.8'">
+      <PropertyGroup>
+        <DllSuffix>260</DllSuffix>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <ActualBplFolder>$(DCC_BplOutput)</ActualBplFolder>
+        <PostBuildEvent>
+          copy "$(ActualBplFolder)\$(BasePackageName)$(DllSuffix).bpl" "$(ActualBplFolder)\$(BasePackageName).bpl"
+        </PostBuildEvent>
+      </PropertyGroup>
+    </When>
 
-  </choose>
-</project>
+  </Choose>
+
+</Project>
