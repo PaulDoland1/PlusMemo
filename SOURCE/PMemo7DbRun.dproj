@@ -10,10 +10,6 @@
 			<ProjectVersion>13.4</ProjectVersion>
 			<Platform Condition="'$(Platform)'==''">Win64</Platform>
 		</PropertyGroup>
-		<PropertyGroup>
-			<BasePackageName>PMemo7DbRun</BasePackageName>
-		</PropertyGroup>
-		<Import Project="PM_compilers.props" />
 		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
 			<Base>true</Base>
 		</PropertyGroup>

@@ -1,5 +1,3 @@
-{$I PM_Compilers.inc}
-
 package PMemo7DbRun;
 
 {$R *.res}
@@ -30,6 +28,7 @@ package PMemo7DbRun;
 {$DESCRIPTION 'PlusMemo DB components'}
 {$RUNONLY}
 {$IMPLICITBUILD ON}
+{$LIBSUFFIX '????'}
 
 requires
   PMemo7Run,

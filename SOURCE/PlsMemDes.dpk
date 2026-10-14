@@ -1,5 +1,3 @@
-{$I PM_compilers.inc}
-
 package PlsMemDes;
 
 {$R *.res}
@@ -41,7 +39,7 @@ package PlsMemDes;
 {$DESCRIPTION 'PlusMemo v7.5 and accessories'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
-{$DEFINE RELEASE}
+{$LIBSUFFIX '????'}
 
 requires
   PlsMemRun,

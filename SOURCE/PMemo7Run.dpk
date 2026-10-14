@@ -1,5 +1,3 @@
-{$I PM_Compilers.inc}
-
 package PMemo7Run;
 
 {$R *.res}
@@ -30,6 +28,7 @@ package PMemo7Run;
 {$DESCRIPTION 'PlusMemo v7.5 and accessories'}
 {$RUNONLY}
 {$IMPLICITBUILD ON}
+{$LIBSUFFIX '????'}
 
 requires
   rtl,
