@@ -1,5 +1,3 @@
-{$I PM_Compilers.inc}
-
 package PMemo7Des;
 
 {$R *.res}
@@ -44,6 +42,7 @@ package PMemo7Des;
 {$DESCRIPTION 'PlusMemo v7.5 and accessories'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
+{$LIBSUFFIX '????'}
 
 requires
   PMemo7Run,
