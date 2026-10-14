@@ -40,9 +40,9 @@ package PMemo7Des;
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'PlusMemo v7.5 and accessories'}
+{$LIBSUFFIX '????'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
-{$LIBSUFFIX '????'}
 
 requires
   PMemo7Run,

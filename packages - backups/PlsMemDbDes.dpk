@@ -38,9 +38,9 @@ package PlsMemDbDes;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DESCRIPTION 'PlusMemo Db Components'}
+{$LIBSUFFIX '????'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
-{$LIBSUFFIX '????'}
 
 requires
   PlsMemDbRun,
