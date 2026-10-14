@@ -27,9 +27,9 @@ package PMemo7DbDes;
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'PlusMemo DB Components'}
+{$LIBSUFFIX '????'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
-{$LIBSUFFIX '????'}
 
 requires
   PMemo7DbRun,

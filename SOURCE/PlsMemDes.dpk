@@ -37,9 +37,9 @@ package PlsMemDes;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DESCRIPTION 'PlusMemo v7.5 and accessories'}
+{$LIBSUFFIX '????'}
 {$DESIGNONLY}
 {$IMPLICITBUILD ON}
-{$LIBSUFFIX '????'}
 
 requires
   PlsMemRun,

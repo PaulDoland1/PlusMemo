@@ -26,9 +26,9 @@ package PMemo7Run;
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'PlusMemo v7.5 and accessories'}
+{$LIBSUFFIX '????'}
 {$RUNONLY}
 {$IMPLICITBUILD ON}
-{$LIBSUFFIX '????'}
 
 requires
   rtl,
