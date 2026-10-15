@@ -52,7 +52,7 @@ ConfigPlusMemo XE2 PMemo7*.*
 Note that I also included the source for the ConfigPlusMemo utility.  I compiled it with D2007 to keep the .EXE file small.  The suffix itself is arbitrary so long as it is unique for every version of Delphi that you have installed.  But using something appropriate for the compiler version is recommended.  As noted, when using 10.4 Sydney or later, it will pick the LIBSUFFIX automatically and you don't need to do this.
 
 
-Once you open the groupproj for your version of Delphi, you should find four projects. The primary runtime project, the primary design-time project, a supplemental DB runtime project and a supplemental DB design-time project.  In 7.2 and earlier, the DB component wasn't even a standard install, you had to manually add it yourself if you wanted it.  Therefore, I don't think many people ever used it.  You can choose to install the DB packages or not.
+Once you open the groupproj for your version of Delphi, you should find four projects. The primary runtime project, the primary design-time project, a supplemental DB runtime project and a supplemental DB design-time project.  In PlusMemo 7.2 and earlier, the DB component wasn't even a standard install, you had to manually add it yourself if you wanted it.  Therefore, I don't think many people ever used it.  You can choose to install the DB packages or not.
 
 
 The installation is dead simple.  Just compile the runtime package(s) as 32-bit and/or 64-bit as you require.  Then compile and install the design-time package(s).  The 64-bit design-time packages requires a 64-bit IDE, which requires Delphi 12.3 or later.  While, naturally, you can install the 32-bit design-time packages into the 32-bit IDE.
