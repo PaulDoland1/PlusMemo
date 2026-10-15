@@ -1,7 +1,6 @@
 program ConfigPlusMemo;
 
 {$APPTYPE CONSOLE}
-{$SetPEFlags 1} // Keeps size around 90KB by stripping relocation data
 
 uses
   SysUtils,
@@ -44,9 +43,8 @@ var
   FilePath: string;
   FileContent: TStringList;
   I: Integer;
-  UserResponse: string;
   SR: TSearchRec;
-  FilesFound: Boolean;
+  FileExt: string;
 
 begin
   try
@@ -67,55 +65,42 @@ begin
     begin
       Writeln('ConfigPlusMemo Error: It looks like you forgot to provide the substitution string!');
       Writeln('The first argument "', ReplacementStr, '" is an existing file.');
-      Writeln('Aborting to protect your files from accidental corruption.');
       ExitCode := 1;
       Exit;
     end;
 
-    { 4. Interactive Confirmation Prompt }
-    Write('Set package suffix to: "', ReplacementStr, '"? Confirm Y/N: ');
-    Readln(UserResponse);
-
-    { Check user response (Handles 'n', 'N', or completely empty inputs) }
-    UserResponse := UpperCase(Trim(UserResponse));
-    if (UserResponse <> 'Y') and (UserResponse <> 'YES') then
-    begin
-      Writeln('Operation cancelled by user.');
-      ExitCode := 0;
-      Exit;
-    end;
-
-    Writeln; // Clear line for readability
-
-    { 5. Process files and wildcards once confirmed }
     FileContent := TStringList.Create;
     try
+      { 4. Iterate through all file parameters provided }
       for I := 2 to ParamCount do
       begin
         FileParam := ParamStr(I);
         BaseDir := ExtractFilePath(FileParam);
-        FilesFound := False;
 
-        { Find all files matching the criteria (supports literals or wildcards like *.dpk) }
-        if FindFirst(FileParam, faAnyFile and not faDirectory, SR) = 0 then
+        if FindFirst(FileParam, faAnyFile - faDirectory, SR) = 0 then
         begin
           try
             repeat
-              FilesFound := True;
               FilePath := BaseDir + SR.Name;
-              ProcessFile(FilePath, ReplacementStr, FileContent);
+              FileExt := LowerCase(ExtractFileExt(FilePath));
+
+              { 5. Filter for .dproj and .dpk files only }
+              if (FileExt = '.dproj') or (FileExt = '.dpk') then
+              begin
+                ProcessFile(FilePath, ReplacementStr, FileContent);
+              end
+              else
+              begin
+                { 6. Log skipped files with the updated specific reason }
+                Writeln('Skipped (only processing .dpk and .dproj files): ', FilePath);
+              end;
+
             until FindNext(SR) <> 0;
           finally
             FindClose(SR);
           end;
         end;
-
-        if not FilesFound then
-        begin
-          Writeln('Skipping (no files matched specification): ', FileParam);
-        end;
       end;
-
     finally
       FileContent.Free;
     end;
@@ -123,9 +108,8 @@ begin
   except
     on E: Exception do
     begin
-      Writeln('An unexpected error occurred: ', E.Message);
-      ExitCode := 1;
+      Writeln('An unexpected error occurred: ', E.ClassName, ': ', E.Message);
+      ExitCode := 2;
     end;
   end;
 end.
-
